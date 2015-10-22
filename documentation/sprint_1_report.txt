@@ -1,11 +1,10 @@
 Document Name: Sprint 1 Report
 Product Name: Driving Tracker
 Team Name: Drifting Coders
-Sprint Completion Date: November 7th, 2015
-Revision Number / Date: 1.0 / October 21st, 2015
+Sprint Completion Date: October 21, 2015
 
 
-What things should we stop doing?
+Actions to stop doing:
 
 1. We should minimize Skype calls to participate 
 in meetings.
@@ -15,13 +14,16 @@ Establish a new meeting time and give all members
 24 hour notice.
 
 
-What should we start doing?
+Actions to start doing:
 
 1. We should work on the project everyday, and 
 report what we have done every other day.
 
 
-What work was completed, and not completed?
+Actions to keep doing:
+
+
+Work completed/not completed:
 
 All user stories were completed
 
@@ -36,7 +38,7 @@ it would be intuitive to use.
 an account, so that I can store my information.
 
 
-What is our rate of completing work?
+Work completion rate:
 
 Sprint 1: There were 3 user stories completed. 
 User Story 1: 32 hours
