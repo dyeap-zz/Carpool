@@ -33,3 +33,13 @@ Armando Silva: Scrum Master
 Danny Yeap: Team Member
 Vivian Tong: Product Owner
 Ben D'Costa: Team Member
+
+Initial task assignment: 
+
+Initial burnup chart:
+
+Scrum times:
+Tuesday 10:45am
+Thursday 10:00am
+Saturday 1pm
+
