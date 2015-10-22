@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:stretchColumns="1">
+
+<TableRow>
+    <TextView
+        android:layout_column="1"
+        android:text="User 1"
+        android:padding="3dip" />
+
+    <TextView
+        android:text="Owe 20"
+        android:gravity="right"
+        android:padding="3dip"
+        android:textColor="#ff0000" />
+</TableRow>
+
+<View
+    android:layout_height="2dip"
+    android:background="#000000" />
+
+<TableRow>
+    <TextView
+        android:layout_column="1"
+        android:text="User 2"
+        android:padding="3dip" />
+    <TextView
+        android:text="Owes You 10"
+        android:gravity="right"
+        android:padding="3dip"
+        android:textColor="#00ff00" />
+</TableRow>
+
+<View
+    android:layout_height="2dip"
+    android:background="#000000" />
+
+<TableRow>
+    <TextView
+        android:layout_column="1"
+        android:text="User 3"
+        android:padding="3dip"
+        android:autoText="false" />
+    <TextView
+        android:text="Owe 10"
+        android:gravity="right"
+        android:padding="3dip"
+        android:textColor="#ff0000" />
+</TableRow>
+
+<View
+    android:layout_height="2dip"
+    android:background="#000000" />
+
+<TableRow>
+    <TextView
+        android:layout_column="1"
+        android:text="User 4"
+        android:padding="3dip"
+        android:autoText="false" />
+    <TextView
+        android:text="Owes You 30"
+        android:padding="3dip"
+        android:textColor="#00ff00" />
+</TableRow>
+
+<View
+    android:layout_height="2dip"
+    android:background="#000000" />
+
+<TableRow>
+    <TextView
+        android:layout_column="1"
+        android:text="User 5"
+        android:padding="3dip" />
+
+    <TextView
+        android:text="Owe 20"
+        android:gravity="right"
+        android:padding="3dip"
+        android:textColor="#ff0000" />
+</TableRow>
+
+<View
+    android:layout_height="2dip"
+    android:background="#000000" />
+
+<TableRow>
+    <TextView
+        android:layout_column="1"
+        android:text="User 6"
+        android:padding="3dip" />
+    <TextView
+        android:text="Owes You 10"
+        android:gravity="right"
+        android:padding="3dip"
+        android:textColor="#00ff00" />
+</TableRow>
+
+<View
+    android:layout_height="2dip"
+    android:background="#000000" />
+
+<TableRow>
+    <TextView
+        android:layout_column="1"
+        android:text="User 7"
+        android:padding="3dip"
+        android:autoText="false" />
+    <TextView
+        android:text="Owe 10"
+        android:gravity="right"
+        android:padding="3dip"
+        android:textColor="#ff0000" />
+</TableRow>
+
+<View
+    android:layout_height="2dip"
+    android:background="#000000" />
+
+<TableRow>
+    <TextView
+        android:layout_column="1"
+        android:text="User 8"
+        android:padding="3dip"
+        android:autoText="false" />
+    <TextView
+        android:text="Owes You 30"
+        android:padding="3dip"
+        android:textColor="#00ff00" />
+</TableRow>
+
+<View
+    android:layout_height="2dip"
+    android:background="#000000" />
+
+<TableRow>
+    <TextView
+        android:layout_column="1"
+        android:text="User 9"
+        android:padding="3dip" />
+
+    <TextView
+        android:text="Owe 20"
+        android:gravity="right"
+        android:padding="3dip"
+        android:textColor="#ff0000" />
+</TableRow>
+
+<View
+    android:layout_height="2dip"
+    android:background="#000000" />
+
+<TableRow>
+    <TextView
+        android:layout_column="1"
+        android:text="User 10"
+        android:padding="3dip" />
+    <TextView
+        android:text="Owes You 10"
+        android:gravity="right"
+        android:padding="3dip"
+        android:textColor="#00ff00" />
+</TableRow>
+
+<View
+    android:layout_height="2dip"
+    android:background="#000000" />
+
+<TableRow>
+    <TextView
+        android:layout_column="1"
+        android:text="User 11"
+        android:padding="3dip"
+        android:autoText="false" />
+    <TextView
+        android:text="Owe 10"
+        android:gravity="right"
+        android:padding="3dip"
+        android:textColor="#ff0000" />
+</TableRow>
+
+<View
+    android:layout_height="2dip"
+    android:background="#000000" />
+
+<TableRow>
+    <TextView
+        android:layout_column="1"
+        android:text="User 12"
+        android:padding="3dip"
+        android:autoText="false" />
+    <TextView
+        android:text="Owes You 30"
+        android:padding="3dip"
+        android:textColor="#00ff00" />
+</TableRow>
+
+<View
+    android:layout_height="2dip"
+    android:background="#000000" />
+<TableRow>
+    <TextView
+        android:layout_column="1"
+        android:text="User 13"
+        android:padding="3dip" />
+
+    <TextView
+        android:text="Owe 20"
+        android:gravity="right"
+        android:padding="3dip"
+        android:textColor="#ff0000" />
+</TableRow>
+
+<View
+    android:layout_height="2dip"
+    android:background="#000000" />
+
+<TableRow>
+    <TextView
+        android:layout_column="1"
+        android:text="User 14"
+        android:padding="3dip" />
+    <TextView
+        android:text="Owes You 10"
+        android:gravity="right"
+        android:padding="3dip"
+        android:textColor="#00ff00" />
+</TableRow>
+
+<View
+    android:layout_height="2dip"
+    android:background="#000000" />
+
+<TableRow>
+    <TextView
+        android:layout_column="1"
+        android:text="User 15"
+        android:padding="3dip"
+        android:autoText="false" />
+    <TextView
+        android:text="Owe 10"
+        android:gravity="right"
+        android:padding="3dip"
+        android:textColor="#ff0000" />
+</TableRow>
+
+<View
+    android:layout_height="2dip"
+    android:background="#000000" />
+
+<TableRow>
+    <TextView
+        android:layout_column="1"
+        android:text="User 16"
+        android:padding="3dip"
+        android:autoText="false" />
+    <TextView
+        android:text="Owes You 30"
+        android:padding="3dip"
+        android:textColor="#00ff00" />
+</TableRow>
+
+<View
+    android:layout_height="2dip"
+    android:background="#000000" />
+<TableRow>
+    <TextView
+        android:layout_column="1"
+        android:text="User 17"
+        android:padding="3dip" />
+
+    <TextView
+        android:text="Owe 20"
+        android:gravity="right"
+        android:padding="3dip"
+        android:textColor="#ff0000" />
+</TableRow>
+
+<View
+    android:layout_height="2dip"
+    android:background="#000000" />
+
+<TableRow>
+    <TextView
+        android:layout_column="1"
+        android:text="User 18"
+        android:padding="3dip" />
+    <TextView
+        android:text="Owes You 10"
+        android:gravity="right"
+        android:padding="3dip"
+        android:textColor="#00ff00" />
+</TableRow>
+
+<View
+    android:layout_height="2dip"
+    android:background="#000000" />
+
+<TableRow></TableRow>
+
+<TableRow
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"></TableRow>
+
+<TableRow
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+</TableRow>
+
+<TableRow
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:id="@+id/button"
+        android:onClick="clickBack"
+        android:layout_column="1"
+        android:layout_span="2" />
+</TableRow>
+</TableLayout>
