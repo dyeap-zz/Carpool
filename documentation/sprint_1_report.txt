@@ -1,0 +1,53 @@
+Document Name: Sprint 1 Report
+Product Name: Driving Tracker
+Team Name: Drifting Coders
+Sprint Completion Date: October 21, 2015
+
+
+Actions to stop doing:
+
+1. We should minimize Skype calls to participate 
+in meetings because the meeting doesn't progress
+efficiently.
+2. Give notice when one cannot attend scheduled 
+Scrum meetings, so the whole team can reschedule
+because we would like to prevent Skype calls.
+Establish a new meeting time and give all members 
+24 hour notice, so that everyone can attend the meeting.
+
+
+Actions to start doing:
+
+1. We should work on the project everyday, and 
+report what we have done every other day because 
+we did not get much done in the last sprint.
+
+
+Actions to keep doing:
+1. We should continue meeting up because we are most 
+productive during those times.
+
+
+Work completed/not completed:
+
+All user stories were completed
+
+User stories:
+1. As a user, I would like a table that lists how 
+much my friends and I have driven, so that I can
+easily see the distribution of driving.
+2. As a user, I would ike a main page to see the 
+overall functionality of the application, so that
+it would be intuitive to use.
+3. As a user, I would like to be able to create 
+an account, so that I can store my information.
+
+
+Work completion rate:
+
+Sprint 1: There were 3 user stories completed. 
+User Story 1: 32 hours
+User Story 2: 12 hours
+User Story 3: 16 hours
+The average user story per day was 0.18 user story per day.
+The average work hours per day was 3.5 hours per day
