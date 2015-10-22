@@ -7,20 +7,25 @@ Sprint Completion Date: October 21, 2015
 Actions to stop doing:
 
 1. We should minimize Skype calls to participate 
-in meetings.
+in meetings because the meeting doesn't progress
+efficiently.
 2. Give notice when one cannot attend scheduled 
-Scrum meetings, so the whole team can reschedule.
+Scrum meetings, so the whole team can reschedule
+because we would like to prevent Skype calls.
 Establish a new meeting time and give all members 
-24 hour notice.
+24 hour notice, so that everyone can attend the meeting.
 
 
 Actions to start doing:
 
 1. We should work on the project everyday, and 
-report what we have done every other day.
+report what we have done every other day because 
+we did not get much done in the last sprint.
 
 
 Actions to keep doing:
+1. We should continue meeting up because we are most 
+productive during those times.
 
 
 Work completed/not completed:
