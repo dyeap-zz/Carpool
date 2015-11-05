@@ -8,26 +8,35 @@
  */
 package com.parse.starter;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.parse.ParseAnalytics;
-
 import com.parse.ParseObject;
+
 public class MainActivity extends ActionBarActivity {
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
+    //xml file layout
     setContentView(R.layout.activity_main);
 
+    //testing the parse database
     ParseAnalytics.trackAppOpenedInBackground(getIntent());
-
     ParseObject testObject = new ParseObject("TestObject");
-    testObject.put("foo", "rawr");
+    testObject.put("lala", "time");
     testObject.saveInBackground();
+  }
+
+  //redirect for register button
+  public void clickEnter(View v){
+    Intent myIntent = new Intent(MainActivity.this, login.class);
+    startActivity(myIntent);
   }
 
   @Override
