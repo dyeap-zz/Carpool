@@ -7,7 +7,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TableLayout;
 import android.widget.TableRow;
-import android.widget.TableRow.LayoutParams;
 import android.widget.TextView;
 
 import com.parse.FindCallback;
@@ -15,61 +14,72 @@ import com.parse.ParseException;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
 public class LogActivity extends ActionBarActivity {
-
     private Context context = this;
 
-    /* Declaring table*/
-    //ParseObject drivingTable = DataHolder.getInstance().getData();
-
-    /* Number of columns to display for the log */
+    /* Columns to display for the table */
     int cols = 3;
 
     @Override
-    protected void onCreate(final Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_log);
 
-        //Set random values into the table
-        //drivingTable.put("username", "Yoshi");
-        //drivingTable.saveInBackground();
+        /* Displays username*/
+        final String username = DataHolder.getInstance().getUsername();
+        TextView textElement = (TextView) findViewById(R.id.username);
+        textElement.setText(username);
 
         /* Create Table for view log */
         final TableLayout table_layout = (TableLayout) findViewById(R.id.tableLayout);
 
         // Query database
-        ParseQuery<ParseObject> query = ParseQuery.getQuery("DrivingTable");
-        query.whereExists("username");
-        query.findInBackground(new FindCallback<ParseObject>() {
+        // Compares user1 with username
+        ParseQuery<ParseObject> user1_query = ParseQuery.getQuery("DrivingTable");
+        user1_query.whereEqualTo("user1", username);
+        // Compares user2 with username
+        ParseQuery<ParseObject> user2_query = ParseQuery.getQuery("DrivingTable");
+        user2_query.whereEqualTo("user2", username);
+        // Store first two queries in a list
+        List<ParseQuery<ParseObject>> queries = new ArrayList<ParseQuery<ParseObject>>();
+        queries.add(user1_query);
+        queries.add(user2_query);
+        // Perform multiple queries
+        ParseQuery<ParseObject> mainQuery = ParseQuery.or(queries);
+        mainQuery.findInBackground(new FindCallback<ParseObject>() {
             @Override
             public void done(List<ParseObject> objects, ParseException e) {
-                if(e == null){
+                if (e == null) {
                     int i = 0;
                     /* Iterate through each row in database */
-                    while(i < objects.size()) {
+                    while (i < objects.size()) {
                         /* Create row for table for each friends */
                         TableRow row = new TableRow(context);
-                        row.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT,
-                                LayoutParams.WRAP_CONTENT));
-                        for(int j = 0; j < cols; j++) {
+                        row.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT,
+                                TableRow.LayoutParams.WRAP_CONTENT));
+                        for (int j = 0; j < cols; j++) {
                             /* Create column for each row (information for each row) */
                             TextView tv = new TextView(context);
-                            tv.setLayoutParams(new LayoutParams(LayoutParams.WRAP_CONTENT,
-                                    LayoutParams.WRAP_CONTENT));
+                            tv.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
+                                    TableRow.LayoutParams.WRAP_CONTENT));
                             tv.setPadding(25, 25, 25, 25);
-                            if(j == 0) {
+                            if (j == 0) {
                                 /* Number each entry */
-                                tv.setText(Integer.toString(i));
+                                tv.setText(Integer.toString(i + 1));
                                 row.addView(tv);
-                            }else if(j == 1) {
+                            } else if (j == 1) {
                                 /* Username of friend */
-                                String username = objects.get(i).getString("username");
-                                tv.setText(username);
+                                String friend_username = objects.get(i).getString("user2");
+                                if(friend_username.equals(username)){
+                                    friend_username = objects.get(i).getString("user1");
+                                }
+                                tv.setText(friend_username);
                                 row.addView(tv);
-                            } else if (j == 2){
+                            } else if (j == 2) {
                                 /* Time owed */
                                 int time = objects.get(i).getInt("time");
                                 tv.setText(Integer.toString(time));
@@ -81,9 +91,9 @@ public class LogActivity extends ActionBarActivity {
                     }
                 }
             }
-         });
+        });
     }
-    
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.

@@ -17,20 +17,20 @@ import com.parse.ParseUser;
 
 public class StarterApplication extends Application {
 
-  @Override
-  public void onCreate() {
-    super.onCreate();
+    @Override
+    public void onCreate() {
+        super.onCreate();
 
-    // Enable Local Datastore.
-    Parse.enableLocalDatastore(this);
+        // Enable Local Datastore.
+        Parse.enableLocalDatastore(this);
 
-    // Add your initialization code here
-    Parse.initialize(this, "mwkr1pjqvcV8yFPN9P48o3G2YXViMp0lGsL94dgD", "3bJEe4qRQX1KJsQMOVies9HqaE3dUBcHpPqZHo1q");
+        // Add your initialization code here
+        Parse.initialize(this, "mwkr1pjqvcV8yFPN9P48o3G2YXViMp0lGsL94dgD", "3bJEe4qRQX1KJsQMOVies9HqaE3dUBcHpPqZHo1q");
 
-    ParseUser.enableAutomaticUser();
-    ParseACL defaultACL = new ParseACL();
-    // Optionally enable public read access.
-    // defaultACL.setPublicReadAccess(true);
-    ParseACL.setDefaultACL(defaultACL, true);
-  }
+        ParseUser.enableAutomaticUser();
+        ParseACL defaultACL = new ParseACL();
+        // Optionally enable public read access.
+        // defaultACL.setPublicReadAccess(true);
+        ParseACL.setDefaultACL(defaultACL, true);
+    }
 }
