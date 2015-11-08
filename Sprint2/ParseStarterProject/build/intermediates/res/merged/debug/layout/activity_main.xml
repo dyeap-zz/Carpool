@@ -76,7 +76,8 @@
             android:text="@string/create_acc"
             android:onClick="ToCreateAcc"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_weight="0.16" />
 
     </LinearLayout>
 

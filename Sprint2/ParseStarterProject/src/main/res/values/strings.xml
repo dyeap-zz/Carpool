@@ -23,7 +23,7 @@
     <string name="title_activity_log">Driving Log</string>
     <string name="title_activity_friend">Friends</string>
 
-    <string name="welcome"> Driving Tracker</string>
+    <string name="welcome"> Welcome to Driving Tracker!</string>
     <string name="enter_user">Username</string>
     <string name="enter_password">Password</string>
     <string name="enter">Sign In</string>
@@ -36,7 +36,7 @@
 
     <string name="username">Username</string>
 
-    <string name="view_event">View Event</string>
+    <string name="view_event">Creste Event</string>
     <string name="view_log">View Log</string>
     <string name="add_friend">Add Friend</string>
     <string name="sign_out">Sign Out</string>
@@ -44,5 +44,8 @@
     <string name="enter_friend">Enter Friend</string>
     <string name="find_friend">Find Friend</string>
     <string name="find_status">Waiting for input...</string>
+
+    <string name="enter_passenger">Passenger</string>
+    <string name="enter_time">Time Owed</string>
 
 </resources>

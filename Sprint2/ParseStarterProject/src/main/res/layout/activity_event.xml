@@ -6,7 +6,38 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context="com.parse.starter.EventActivity">
 
-    <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/username"
+            android:text="@string/username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center" />
+
+        <EditText android:id="@+id/enter_passenger"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="@string/enter_passenger" />
+
+        <EditText android:id="@+id/enter_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="@string/enter_time" />
+
+        <Button
+            android:id="@+id/update"
+            android:text="Update"
+            android:onClick="Update"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
 
 </RelativeLayout>
