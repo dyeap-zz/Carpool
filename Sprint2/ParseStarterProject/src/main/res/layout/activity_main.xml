@@ -47,7 +47,8 @@
             android:hint="@string/enter_user"
             android:layout_marginTop="0dp"
             android:background="#fafafa"
-            android:layout_weight="0.16" />
+            android:layout_weight="0.16"
+            android:singleLine="true" />
 
         <EditText android:id="@+id/enter_password"
             android:layout_width="match_parent"
@@ -56,7 +57,9 @@
             android:gravity="center"
             android:layout_marginTop="10dp"
             android:background="@android:color/white"
-            android:layout_weight="0.16" />
+            android:layout_weight="0.16"
+            android:password="true"
+            android:singleLine="true" />
 
         <Button
             android:id="@+id/enter"
