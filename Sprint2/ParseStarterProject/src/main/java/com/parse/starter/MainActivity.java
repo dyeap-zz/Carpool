@@ -8,6 +8,7 @@
  */
 package com.parse.starter;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
@@ -15,6 +16,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.parse.LogInCallback;
 import com.parse.ParseAnalytics;
@@ -26,6 +28,7 @@ public class MainActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
         ParseAnalytics.trackAppOpenedInBackground(getIntent());
     }
@@ -55,6 +58,13 @@ public class MainActivity extends ActionBarActivity {
     /* Called when user clicks "Sign In" button */
     public void SignIn(View view){
         final Intent intent = new Intent(this, AccountActivity.class);
+
+        //display error message if password is incorrect
+        Context context = getApplicationContext();
+        CharSequence text = "The username or password is incorrect!";
+        int duration = Toast.LENGTH_SHORT;
+        final Toast toast = Toast.makeText(context, text, duration);
+
         /* Retrieve username and password */
         EditText text_username = (EditText) findViewById(R.id.enter_user);
         EditText text_password = (EditText) findViewById(R.id.enter_password);
@@ -63,13 +73,15 @@ public class MainActivity extends ActionBarActivity {
 
         /* Checks Parse User table for sign in */
         ParseUser.logInInBackground(username, password, new LogInCallback() {
+
             @Override
             public void done(ParseUser user, ParseException e) {
+
                 if (user != null) {
                     DataHolder.getInstance().setUsername(username);
                     startActivity(intent);
                 } else {
-                    System.out.println("Unable to log in");
+                    toast.show();
                 }
             }
         });

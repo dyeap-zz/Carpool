@@ -23,7 +23,7 @@
     <string name="title_activity_log">Driving Log</string>
     <string name="title_activity_friend">Friends</string>
 
-    <string name="welcome"> Welcome to Driving Tracker!</string>
+    <string name="welcome"> Driving Tracker</string>
     <string name="enter_user">Username</string>
     <string name="enter_password">Password</string>
     <string name="enter">Sign In</string>

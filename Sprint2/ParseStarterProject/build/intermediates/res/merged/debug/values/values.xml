@@ -230,7 +230,7 @@
     <string name="username">Username</string>
     <string name="view_event">View Event</string>
     <string name="view_log">View Log</string>
-    <string name="welcome"> Welcome to Driving Tracker!</string>
+    <string name="welcome"> Driving Tracker</string>
     <!-- From: file:/C:/Users/armando/Documents/GitHub/Carpool/Sprint2/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values/values.xml -->
     <eat-comment/>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
