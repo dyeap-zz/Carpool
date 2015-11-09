@@ -39,21 +39,21 @@
 
     <EditText android:id="@+id/enter_newpassword"
         android:layout_width="match_parent"
-        android:layout_height="30dp"
+        android:layout_height="50dp"
         android:gravity="center"
         android:hint="@string/enter_newpassword"
         android:singleLine="true"
         android:password="true"
-        android:layout_weight="0.06"
+        android:layout_weight="0.16"
         android:background="#ffffff"
         android:layout_alignTop="@+id/enter_newuser"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="35dp" />
+        android:layout_marginTop="55dp" />
 
     <EditText android:id="@+id/enter_newuser"
         android:layout_width="match_parent"
-        android:layout_height="30dp"
+        android:layout_height="50dp"
         android:layout_weight="0.16"
         android:hint="@string/enter_newuser"
         android:singleLine="true"

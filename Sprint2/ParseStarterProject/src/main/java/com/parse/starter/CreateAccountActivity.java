@@ -52,7 +52,7 @@ public class CreateAccountActivity extends ActionBarActivity {
     /* Called when user clicks "Create Account" button
  * Creates a new account for user */
     public void CreateAccount(View view){
-        final Intent intent = new Intent(this, MainActivity.class);
+        final Intent intent = new Intent(this, AccountActivity.class);
 
         /* Retrieve username and password for creating a new account */
         EditText text_username = (EditText) findViewById(R.id.enter_newuser);
@@ -85,9 +85,9 @@ public class CreateAccountActivity extends ActionBarActivity {
         user.signUpInBackground(new SignUpCallback() {
             @Override
             public void done(com.parse.ParseException e) {
-
                 if (e == null) {
                     toastsuccess.show();
+                    //DataHolder.getInstance().setUsername(username);
                     startActivity(intent);
                 } else {
                     toastfail.show();

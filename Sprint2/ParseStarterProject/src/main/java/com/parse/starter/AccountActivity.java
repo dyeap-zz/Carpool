@@ -12,7 +12,6 @@ import com.parse.ParseUser;
 
 
 public class AccountActivity extends ActionBarActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -70,4 +69,8 @@ public class AccountActivity extends ActionBarActivity {
         ParseUser.logOut();
         startActivity(intent);
     }
+
+    //Doesn't allow the user to go back, we use a signout button
+    @Override
+    public void onBackPressed(){}
 }
