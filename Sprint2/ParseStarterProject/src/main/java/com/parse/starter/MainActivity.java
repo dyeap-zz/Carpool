@@ -8,7 +8,6 @@
  */
 package com.parse.starter;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
@@ -60,10 +59,9 @@ public class MainActivity extends ActionBarActivity {
         final Intent intent = new Intent(this, AccountActivity.class);
 
         //display error message if password is incorrect
-        Context context = getApplicationContext();
         CharSequence text = "The username or password is incorrect!";
         int duration = Toast.LENGTH_SHORT;
-        final Toast toast = Toast.makeText(context, text, duration);
+        final Toast toast = Toast.makeText(this, text, duration);
 
         /* Retrieve username and password */
         EditText text_username = (EditText) findViewById(R.id.enter_user);

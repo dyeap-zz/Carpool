@@ -32,13 +32,14 @@
         <TextView
             android:id="@+id/welcome"
             android:text="@string/welcome"
-            android:layout_width="158dp"
+            android:layout_width="315dp"
             android:layout_height="89dp"
             android:textStyle="bold"
             android:textSize="20dp"
             android:gravity="center|top"
             android:layout_marginTop="20dp"
-            android:layout_gravity="center_horizontal" />
+            android:layout_gravity="center_horizontal"
+            android:textColor="#ffffff" />
 
         <EditText android:id="@+id/enter_user"
             android:layout_width="match_parent"
@@ -67,7 +68,8 @@
             android:onClick="SignIn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="100dp" />
+            android:layout_marginTop="100dp"
+            android:layout_weight="0.16" />
 
         <View
             android:layout_width="match_parent"
