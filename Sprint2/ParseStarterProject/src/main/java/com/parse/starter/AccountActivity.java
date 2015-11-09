@@ -1,9 +1,8 @@
 package com.parse.starter;
 
 import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.Menu;
+import android.support.v7.app.ActionBarActivity;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
@@ -23,12 +22,6 @@ public class AccountActivity extends ActionBarActivity {
         textElement.setText(username);
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_account, menu);
-        return true;
-    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -45,7 +38,7 @@ public class AccountActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    /* Called when user clicks "View Event" button */
+    /* Called when user clicks "Create an Event" button */
     public void ViewEvent(View view){
         Intent intent = new Intent(this, EventActivity.class);
         startActivity(intent);
