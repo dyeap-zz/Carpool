@@ -33,7 +33,11 @@ public class EventActivity extends ActionBarActivity {
         String username = DataHolder.getInstance().getUsername();
         TextView textElement = (TextView) findViewById(R.id.username);
         textElement.setText(username);
+
+        // Create table activity_event.xml
         final TableLayout table_layout = (TableLayout) findViewById(R.id.tableLayout);
+
+        // Query eventTable
         ParseQuery<ParseObject> passengerList = ParseQuery.getQuery("events");
         passengerList.whereEqualTo("organizer", username);
         passengerList.findInBackground(new FindCallback<ParseObject>() {

@@ -1,17 +1,64 @@
 package com.parse.starter;
 
-import android.support.v7.app.ActionBarActivity;
+import android.content.Context;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TableLayout;
+import android.widget.TableRow;
+import android.widget.TextView;
+
+import com.parse.FindCallback;
+import com.parse.ParseObject;
+import com.parse.ParseQuery;
+
+import java.util.List;
 
 
 public class ViewEventActivity extends ActionBarActivity {
+    private Context context = this;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_event);
+
+        // Get username
+        String username = DataHolder.getInstance().getUsername();
+        // Display username
+        TextView textElement = (TextView) findViewById(R.id.username);
+        textElement.setText(username);
+
+        // Create Table for activivty.view_event.xml
+        final TableLayout table_layout = (TableLayout) findViewById(R.id.tableLayout);
+
+        // Query eventTable and find matches of the user under
+        // organizer and guest columns
+        ParseQuery<ParseObject> events = ParseQuery.getQuery("events");
+        //events.whereEqualTo("organizer", username);
+        events.whereEqualTo("guest", username);
+        events.findInBackground(new FindCallback<ParseObject>() {
+            @Override
+            public void done(List<ParseObject> objects, com.parse.ParseException e) {
+                for(int i = 0; i < objects.size(); i++){
+
+                    TableRow row = new TableRow(context);
+                    row.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT,
+                            TableRow.LayoutParams.WRAP_CONTENT));
+                    TextView tv = new TextView(context);
+                    tv.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
+                            TableRow.LayoutParams.WRAP_CONTENT));
+                    tv.setPadding(25, 25, 25, 25);
+                    String organizer = objects.get(i).getString("organizer");
+                    System.out.printf("organizer: %s\n", organizer);
+                    tv.setText(organizer);
+                    row.addView(tv);
+                    table_layout.addView(row);
+
+                }
+            }
+        });
     }
 
     @Override

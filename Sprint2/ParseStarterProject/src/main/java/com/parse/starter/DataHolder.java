@@ -5,9 +5,9 @@ import com.parse.ParseObject;
 /**
  * Created by VivianTong on 11/5/15.
  */
-public class DataHolder {
-    /* Creating ParseObject for global use */
 
+/* Allow access to variables across files*/
+public class DataHolder {
     /* drivingTable stores the time owed between two drivers
      * Columns: user1, user2, time
      */
@@ -22,7 +22,7 @@ public class DataHolder {
     }
 
     /* eventTable stores the organizer, invitee, and attendance
-     * Columns: organizer, invitee, attendance
+     * Columns: organizer, guest, attending
      */
     ParseObject eventTable = new ParseObject("events");
     public ParseObject getEvent() { return eventTable; }
