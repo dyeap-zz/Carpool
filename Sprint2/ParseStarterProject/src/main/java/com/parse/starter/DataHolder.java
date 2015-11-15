@@ -7,6 +7,10 @@ import com.parse.ParseObject;
  */
 public class DataHolder {
     /* Creating ParseObject for global use */
+
+    /* drivingTable stores the time owed between two drivers
+     * Columns: user1, user2, time
+     */
     ParseObject drivingTable = new ParseObject("DrivingTable");
     /* ParseObject Accessor */
     public ParseObject getData(){
@@ -16,6 +20,13 @@ public class DataHolder {
     public void setData(ParseObject drivingTable){
         this.drivingTable = drivingTable;
     }
+
+    /* eventTable stores the organizer, invitee, and attendance
+     * Columns: organizer, invitee, attendance
+     */
+    ParseObject eventTable = new ParseObject("events");
+    public ParseObject getEvent() { return eventTable; }
+    public void setEvent(ParseObject eventTable) { this.eventTable = eventTable; }
 
     /* Saves username */
     String username = new String("Fill in username");

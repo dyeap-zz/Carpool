@@ -29,7 +29,7 @@ public class EventActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_event);
 
-          /* Displays username */
+        /* Displays username */
         String username = DataHolder.getInstance().getUsername();
         TextView textElement = (TextView) findViewById(R.id.username);
         textElement.setText(username);
@@ -101,44 +101,46 @@ public class EventActivity extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
     public void AddPassenger(View view){
         Intent intent = new Intent(this, AccountActivity.class);
         final String username = DataHolder.getInstance().getUsername();
         EditText text_passenger = (EditText) findViewById(R.id.enter_passenger);
         String passenger_username = text_passenger.getText().toString();
-        ParseObject testObject = new ParseObject("events");
-        testObject.put("organizer", username);
-        testObject.put("guest", passenger_username);
-        testObject.put("attending", false);
-        testObject.saveInBackground();
+        ParseObject eventObject = DataHolder.getInstance().getEvent();
+        eventObject.put("organizer", username);
+        eventObject.put("guest", passenger_username);
+        eventObject.put("attending", false);
+        eventObject.saveInBackground();
         final TableLayout table_layout = (TableLayout) findViewById(R.id.tableLayout);
         TableRow row = new TableRow(context);
         row.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT,
                 TableRow.LayoutParams.WRAP_CONTENT));
         for (int j = 0; j < 3; j++) {
-                            /* Create column for each row (information for each row) */
+            /* Create column for each row (information for each row) */
             TextView tv = new TextView(context);
             tv.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
                     TableRow.LayoutParams.WRAP_CONTENT));
             tv.setPadding(25, 25, 25, 25);
             if (j == 0) {
-                                /* Number each entry */
+                /* Number each entry */
                 increment++;
                 tv.setText(Integer.toString(increment));
                 row.addView(tv);
             } else if (j == 1) {
-                                /* Username of friend */
+                /* Username of friend */
                 String friend_username = passenger_username;
                 tv.setText(friend_username);
                 row.addView(tv);
             } else if (j == 2) {
-                                /* Time owed */
+                /* Time owed */
                 tv.setText("Not Attending");
                 row.addView(tv);
             }
         }
         table_layout.addView(row);
     }
+
     /* Called when user clicks "Update" button */
     public int flag;
     public void Update(View view) {
