@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
@@ -42,20 +43,30 @@ public class ViewEventActivity extends ActionBarActivity {
             @Override
             public void done(List<ParseObject> objects, com.parse.ParseException e) {
                 for(int i = 0; i < objects.size(); i++){
-
+                    // Creates the row in the table
                     TableRow row = new TableRow(context);
                     row.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT,
                             TableRow.LayoutParams.WRAP_CONTENT));
+
+                    // Create content for the row
+                    // First, name of organizer
                     TextView tv = new TextView(context);
                     tv.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
                             TableRow.LayoutParams.WRAP_CONTENT));
                     tv.setPadding(25, 25, 25, 25);
                     String organizer = objects.get(i).getString("organizer");
-                    System.out.printf("organizer: %s\n", organizer);
                     tv.setText(organizer);
                     row.addView(tv);
-                    table_layout.addView(row);
+                    // Second, accept button
+                    Button accept = new Button(ViewEventActivity.this);
+                    accept.setText("Accept");
+                    row.addView(accept);
+                    // Third, deny button
+                    Button deny = new Button(ViewEventActivity.this);
+                    deny.setText("Deny");
+                    row.addView(deny);
 
+                    table_layout.addView(row);
                 }
             }
         });
