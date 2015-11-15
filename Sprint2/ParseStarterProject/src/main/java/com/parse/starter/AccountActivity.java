@@ -44,6 +44,12 @@ public class AccountActivity extends ActionBarActivity {
         startActivity(intent);
     }
 
+    /* Called when user clicks "View Events" button */
+    public void ViewViewEvents(View view){
+        Intent intent = new Intent(this, ViewEventActivity.class);
+        startActivity(intent);
+    }
+
     /* Called when user clicks "View Log" button */
     public void ViewLog(View view){
         Intent intent = new Intent(this, LogActivity.class);

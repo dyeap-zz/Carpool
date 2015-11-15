@@ -5,4 +5,4 @@
     <item android:id="@+id/action_settings" android:title="@string/action_settings"
         android:orderInCategory="100" app:showAsAction="never" />
 </menu>
-<!-- From: file:/C:/Users/armando/Documents/GitHub/Carpool/Sprint2/ParseStarterProject/src/main/res/menu/menu_create_account.xml -->
+<!-- From: file:/Users/VivianTong/Documents/fall2015/cmps115/driving_tracker1/Sprint2/ParseStarterProject/src/main/res/menu/menu_create_account.xml -->

@@ -37,6 +37,7 @@
     <string name="username">Username</string>
 
     <string name="view_event">Create an Event</string>
+    <string name="view_view_events">View Events</string>
     <string name="view_log">View Log</string>
     <string name="add_friend">Add Friend</string>
     <string name="sign_out">Sign Out</string>
@@ -47,5 +48,6 @@
 
     <string name="enter_passenger">Passenger</string>
     <string name="enter_time">Time Owed</string>
+    <string name="title_activity_view_event">ViewEventActivity</string>
 
 </resources>

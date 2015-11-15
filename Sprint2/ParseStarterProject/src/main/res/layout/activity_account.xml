@@ -27,6 +27,13 @@
             android:layout_height="wrap_content" />
 
         <Button
+            android:id="@+id/view_view_events"
+            android:text="@string/view_view_events"
+            android:onClick="ViewViewEvents"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
             android:id="@+id/view_log"
             android:text="@string/view_log"
             android:onClick="ViewLog"

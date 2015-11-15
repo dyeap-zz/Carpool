@@ -27,6 +27,13 @@
             android:layout_height="wrap_content" />
 
         <Button
+            android:id="@+id/view_view_events"
+            android:text="@string/view_view_events"
+            android:onClick="ViewViewEvents"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
             android:id="@+id/view_log"
             android:text="@string/view_log"
             android:onClick="ViewLog"
@@ -50,4 +57,4 @@
     </LinearLayout>
 
 </RelativeLayout>
-<!-- From: file:/C:/Users/armando/Documents/GitHub/Carpool/Sprint2/ParseStarterProject/src/main/res/layout/activity_account.xml -->
+<!-- From: file:/Users/VivianTong/Documents/fall2015/cmps115/driving_tracker1/Sprint2/ParseStarterProject/src/main/res/layout/activity_account.xml -->
