@@ -1,6 +1,5 @@
 package com.parse.starter;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
@@ -18,7 +17,6 @@ import java.util.List;
 
 
 public class ViewEventActivity extends ActionBarActivity {
-    private Context context = this;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,13 +42,13 @@ public class ViewEventActivity extends ActionBarActivity {
             public void done(List<ParseObject> objects, com.parse.ParseException e) {
                 for(int i = 0; i < objects.size(); i++){
                     // Creates the row in the table
-                    TableRow row = new TableRow(context);
+                    TableRow row = new TableRow(ViewEventActivity.this);
                     row.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT,
                             TableRow.LayoutParams.WRAP_CONTENT));
 
                     // Create content for the row
                     // First, name of organizer
-                    TextView tv = new TextView(context);
+                    TextView tv = new TextView(ViewEventActivity.this);
                     tv.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
                             TableRow.LayoutParams.WRAP_CONTENT));
                     tv.setPadding(25, 25, 25, 25);
