@@ -1,0 +1,41 @@
+Document Name: Sprint 2 Report
+Product Name: Driving Tracker
+Team Name: Drifting Coders
+Sprint Completion Date: November 14, 2015
+
+Actions to stop doing:
+
+1.	This Sprint went well, we should continue working hard on the app.
+
+
+Actions to start doing:
+
+1.	We should upload the project onto github whenever a big change is made. This allows other team members to work on the most recent code, so that integration is not terrible
+2.	We should start adding more comments to the code, so that the code is readable to other team members.
+
+
+Actions to keep doing:
+1.	We should continue to meet up and do scrum meetings, because it keeps everyone up to date with progress
+2.	We should continue 
+
+
+Work completed/not completed:
+
+All user stories were completed
+
+User stories:
+User story 1: As a developer, I would like to have a running database, so that I can
+update information and pull information from to provide to the user. 
+
+User story 2: As a developer, I would like to link the UI and database, so that I can
+display information to the user. 
+Sprint 3:
+
+Work completion rate:
+
+Sprint 1: There were 3 user stories completed. 
+User Story 1: 60 hours
+User Story 2: 25 hours
+The average user story per day was 1.26 user story per day.
+The average work hours per day was 3.7 hours per day
+
