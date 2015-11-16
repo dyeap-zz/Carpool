@@ -4,6 +4,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="@drawable/ims"
     tools:context="com.parse.starter.LogActivity">
 
     <LinearLayout
@@ -11,12 +12,19 @@
         android:layout_height="fill_parent"
         android:orientation="vertical"
         android:gravity="center">
+
         <TextView
             android:id="@+id/username"
             android:text="@string/username"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center" />
+            android:layout_height="40dp"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:gravity="center|top"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#ffffff" />
+
         <TableLayout
             android:id="@+id/tableLayout"
             android:layout_width="match_parent"
