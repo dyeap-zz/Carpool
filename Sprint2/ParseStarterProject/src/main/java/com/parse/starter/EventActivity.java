@@ -2,11 +2,13 @@ package com.parse.starter;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TableLayout;
 import android.widget.TableRow;
@@ -16,6 +18,7 @@ import com.parse.FindCallback;
 import com.parse.ParseException;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
+import com.parse.ParseUser;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,65 +32,13 @@ public class EventActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_event);
 
-        /* Displays username */
+          /* Displays username */
         String username = DataHolder.getInstance().getUsername();
         TextView textElement = (TextView) findViewById(R.id.username);
         textElement.setText(username);
+        updateTable(null);
+        
 
-        // Create table activity_event.xml
-        final TableLayout table_layout = (TableLayout) findViewById(R.id.tableLayout);
-
-        System.out.printf("Create Event\n");
-        // Query eventTable
-        ParseQuery<ParseObject> passengerList = ParseQuery.getQuery("events");
-        passengerList.whereEqualTo("organizer", username);
-        passengerList.findInBackground(new FindCallback<ParseObject>() {
-            @Override
-            public void done(List<ParseObject> objects, ParseException e) {
-                System.out.printf("inside query\n");
-                if (e == null) {
-                    System.out.printf("query success!");
-                    int i = 0;
-                    int cols = 3;
-                    while (i < objects.size()) {
-                        TableRow row = new TableRow(context);
-                        row.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT,
-                                TableRow.LayoutParams.WRAP_CONTENT));
-                        for (int j = 0; j < cols; j++) {
-                            /* Create column for each row (information for each row) */
-                            TextView tv = new TextView(context);
-                            tv.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
-                                    TableRow.LayoutParams.WRAP_CONTENT));
-                            tv.setPadding(25, 25, 25, 25);
-                            if (j == 0) {
-                                /* Number each entry */
-                                tv.setText(Integer.toString(i + 1));
-                                row.addView(tv);
-                            } else if (j == 1) {
-                                /* Username of friend */
-                                String friend_username = objects.get(i).getString("guest");
-                                tv.setText(friend_username);
-                                System.out.printf("friend %s\n", friend_username);
-                                row.addView(tv);
-                            } else if (j == 2) {
-                                /* Time owed */
-                                Boolean isAttend = objects.get(i).getBoolean("attending");
-                                if (isAttend)
-                                    tv.setText("Attending");
-                                else
-                                    tv.setText("Not Attending");
-                                row.addView(tv);
-                            }
-                        }
-                        i++;
-                        increment = i;
-                        table_layout.addView(row);
-                    }
-                } else {
-                    System.out.printf("Query failed\n");
-                }
-            }
-        });
     }
 
     @Override
@@ -111,46 +62,26 @@ public class EventActivity extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
     public void AddPassenger(View view){
         Intent intent = new Intent(this, AccountActivity.class);
+        final TableLayout table_layout = (TableLayout) findViewById(R.id.tableLayout);
         final String username = DataHolder.getInstance().getUsername();
         EditText text_passenger = (EditText) findViewById(R.id.enter_passenger);
         String passenger_username = text_passenger.getText().toString();
-        ParseObject eventObject = DataHolder.getInstance().getEvent();
-        eventObject.put("organizer", username);
-        eventObject.put("guest", passenger_username);
-        eventObject.put("attending", false);
-        eventObject.saveInBackground();
-        final TableLayout table_layout = (TableLayout) findViewById(R.id.tableLayout);
-        TableRow row = new TableRow(context);
-        row.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT,
-                TableRow.LayoutParams.WRAP_CONTENT));
-        for (int j = 0; j < 3; j++) {
-            /* Create column for each row (information for each row) */
-            TextView tv = new TextView(context);
-            tv.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
-                    TableRow.LayoutParams.WRAP_CONTENT));
-            tv.setPadding(25, 25, 25, 25);
-            if (j == 0) {
-                /* Number each entry */
-                increment++;
-                tv.setText(Integer.toString(increment));
-                row.addView(tv);
-            } else if (j == 1) {
-                /* Username of friend */
-                String friend_username = passenger_username;
-                tv.setText(friend_username);
-                row.addView(tv);
-            } else if (j == 2) {
-                /* Time owed */
-                tv.setText("Not Attending");
-                row.addView(tv);
-            }
+        ParseObject testObject = new ParseObject("events");
+        testObject.put("organizer", username);
+        testObject.put("guest", passenger_username);
+        testObject.put("attending", false);
+        try {
+            testObject.saveInBackground();
         }
-        table_layout.addView(row);
-    }
+        catch(Exception e){
+            System.err.print("error");
+        }
 
+        table_layout.removeAllViews();
+        updateTable(null);
+    }
     /* Called when user clicks "Update" button */
     public int flag;
     public void Update(View view) {
@@ -171,8 +102,10 @@ public class EventActivity extends ActionBarActivity {
             public void done(List<ParseObject> object, ParseException e) {
                 try{
                     for (int i = 0; i < object.size(); i++) {
-                        if(object.get(i).getBoolean("attending") == true)
+                        if (object.get(i).getBoolean("attending") == true){
                             passengers.add(object.get(i).getString("guest"));
+                            String test = object.get(i).getObjectId();
+                        }
                         else
                             passengers.add(null);
                     }
@@ -227,5 +160,72 @@ public class EventActivity extends ActionBarActivity {
 
         startActivity(intent);
     }
+    public void updateTable(View view){
+        final String username = DataHolder.getInstance().getUsername();
+        final TableLayout table_layout = (TableLayout) findViewById(R.id.tableLayout);
+        ParseQuery<ParseObject> passengerList = ParseQuery.getQuery("events");
+        passengerList.whereEqualTo("organizer", username);
+        passengerList.findInBackground(new FindCallback<ParseObject>() {
+            @Override
+            public void done(List<ParseObject> objects, ParseException e) {
+                if (e == null) {
+                    int i = 0;
+                    int cols = 3;
+                    while (i < objects.size()) {
+                        TableRow row = new TableRow(context);
+                        row.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT,
+                                TableRow.LayoutParams.WRAP_CONTENT));
+                        for (int j = 0; j < cols; j++) {
+                            /* Create column for each row (information for each row) */
+                            TextView tv = new TextView(context);
+                            tv.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT,
+                                    TableRow.LayoutParams.WRAP_CONTENT));
+                            tv.setPadding(25, 25, 25, 25);
+                            if (j == 0) {
+                                /* Number each entry */
+                                tv.setText(Integer.toString(i + 1));
+                                row.addView(tv);
+                            } else if (j == 1) {
+                                /* Username of friend */
+                                String friend_username = objects.get(i).getString("guest");
+                                tv.setText(friend_username);
+                                row.addView(tv);
+                            } else if (j == 2) {
+                                /* Time owed */
+                                Boolean isAttend = objects.get(i).getBoolean("attending");
+                                if (isAttend == true)
+                                    tv.setText("Attending");
+                                else
+                                    tv.setText("Not Attending");
+                                row.addView(tv);
+                            }
+                        }
+                        final Button removeButton = new Button(context);
+                        removeButton.setText("uninvite");
+                        removeButton.setContentDescription(objects.get(i).getObjectId());
+                        removeButton.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                try {
+                                    ParseObject.createWithoutData("events", (String) removeButton.getContentDescription()).delete();
+                                }catch(Exception e){
+                                    System.err.println("cant find");
+                                }
+                                table_layout.removeAllViews();
+                                updateTable(null);
+                            }
+                        });
+                        i++;
+                        increment = i;
+
+
+                        row.addView(removeButton);
+                        table_layout.addView(row);
+                    }
+                }
+            }
+        });
+    }
 
 }
+
