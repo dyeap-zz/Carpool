@@ -37,13 +37,16 @@ public class EventActivity extends ActionBarActivity {
         // Create table activity_event.xml
         final TableLayout table_layout = (TableLayout) findViewById(R.id.tableLayout);
 
+        System.out.printf("Create Event\n");
         // Query eventTable
         ParseQuery<ParseObject> passengerList = ParseQuery.getQuery("events");
         passengerList.whereEqualTo("organizer", username);
         passengerList.findInBackground(new FindCallback<ParseObject>() {
             @Override
             public void done(List<ParseObject> objects, ParseException e) {
+                System.out.printf("inside query\n");
                 if (e == null) {
+                    System.out.printf("query success!");
                     int i = 0;
                     int cols = 3;
                     while (i < objects.size()) {
@@ -64,11 +67,12 @@ public class EventActivity extends ActionBarActivity {
                                 /* Username of friend */
                                 String friend_username = objects.get(i).getString("guest");
                                 tv.setText(friend_username);
+                                System.out.printf("friend %s\n", friend_username);
                                 row.addView(tv);
                             } else if (j == 2) {
                                 /* Time owed */
                                 Boolean isAttend = objects.get(i).getBoolean("attending");
-                                if (isAttend == true)
+                                if (isAttend)
                                     tv.setText("Attending");
                                 else
                                     tv.setText("Not Attending");
@@ -79,6 +83,8 @@ public class EventActivity extends ActionBarActivity {
                         increment = i;
                         table_layout.addView(row);
                     }
+                } else {
+                    System.out.printf("Query failed\n");
                 }
             }
         });

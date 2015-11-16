@@ -69,7 +69,7 @@
             android:gravity="center"
             android:hint="@string/enter_time"
             android:background="#fafafa"
-            android:singleLine="true"/>
+            android:singleLine="true" />
 
         <Button
             android:id="@+id/update"
