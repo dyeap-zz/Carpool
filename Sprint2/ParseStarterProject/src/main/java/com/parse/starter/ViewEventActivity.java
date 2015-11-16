@@ -12,6 +12,7 @@ import android.widget.TableRow;
 import android.widget.TextView;
 
 import com.parse.FindCallback;
+import com.parse.ParseException;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
 
@@ -81,15 +82,44 @@ public class ViewEventActivity extends ActionBarActivity {
     View.OnClickListener acceptHandler = new OnClickListener() {
         @Override
         public void onClick(View view) {
-            System.out.printf("accept\n");
+            String organizer = organizers.get(organizers.size() - 1);
 
+            // Query find the organizer of the event
+            ParseQuery<ParseObject> eventQuery = ParseQuery.getQuery("events");
+            eventQuery.whereEqualTo("organizer", organizer);
+            eventQuery.findInBackground(new FindCallback<ParseObject>() {
+                @Override
+                public void done(List<ParseObject> objects, ParseException e) {
+                    for(int i = 0; i < objects.size(); i++ ){
+                        // Change attending to true
+                        objects.get(i).put("attending", true);
+                        objects.get(i).saveInBackground();
+                    }
+                }
+            });
         }
     };
 
     View.OnClickListener denyHandler = new OnClickListener() {
         @Override
         public void onClick(View view) {
-            System.out.printf("deny\n");
+            String organizer = organizers.get(organizers.size() - 1);
+            System.out.printf("deny: %s\n", organizer);
+
+            // Query find the organizer of the event
+            ParseQuery<ParseObject> eventQuery = ParseQuery.getQuery("events");
+            eventQuery.whereEqualTo("organizer", organizer);
+            eventQuery.findInBackground(new FindCallback<ParseObject>() {
+                @Override
+                public void done(List<ParseObject> objects, ParseException e) {
+                    for(int i = 0; i < objects.size(); i++){
+                        // Update attending to false
+                        objects.get(i).put("attending", false);
+                        objects.get(i).saveInBackground();
+                    }
+                }
+            });
+
         }
     };
 
