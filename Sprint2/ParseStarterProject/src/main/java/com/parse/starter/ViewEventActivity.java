@@ -4,6 +4,8 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.TableLayout;
 import android.widget.TableRow;
@@ -13,11 +15,12 @@ import com.parse.FindCallback;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
 public class ViewEventActivity extends ActionBarActivity {
-
+    List<String> organizers = new ArrayList<String>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,22 +56,42 @@ public class ViewEventActivity extends ActionBarActivity {
                             TableRow.LayoutParams.WRAP_CONTENT));
                     tv.setPadding(25, 25, 25, 25);
                     String organizer = objects.get(i).getString("organizer");
+                    organizers.add(i, organizer);
                     tv.setText(organizer);
                     row.addView(tv);
                     // Second, accept button
                     Button accept = new Button(ViewEventActivity.this);
                     accept.setText("Accept");
+                    accept.setId(i);
+                    accept.setOnClickListener(acceptHandler);
                     row.addView(accept);
                     // Third, deny button
                     Button deny = new Button(ViewEventActivity.this);
                     deny.setText("Deny");
+                    deny.setId(i);
                     row.addView(deny);
+                    deny.setOnClickListener(denyHandler);
 
                     table_layout.addView(row);
                 }
             }
         });
     }
+
+    View.OnClickListener acceptHandler = new OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            System.out.printf("accept\n");
+
+        }
+    };
+
+    View.OnClickListener denyHandler = new OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            System.out.printf("deny\n");
+        }
+    };
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
