@@ -60,6 +60,7 @@ public class ViewEventActivity extends ActionBarActivity {
                     String organizer = objects.get(i).getString("organizer");
                     organizers.add(i, organizer);
                     tv.setText(organizer);
+                    tv.setTextColor(Color.WHITE);
                     row.addView(tv);
                     // attending?
                     Boolean attending = objects.get(i).getBoolean("attending");
