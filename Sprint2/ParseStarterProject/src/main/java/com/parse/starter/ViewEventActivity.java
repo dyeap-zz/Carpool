@@ -1,5 +1,6 @@
 package com.parse.starter;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
@@ -60,6 +61,8 @@ public class ViewEventActivity extends ActionBarActivity {
                     organizers.add(i, organizer);
                     tv.setText(organizer);
                     row.addView(tv);
+                    // attending?
+                    Boolean attending = objects.get(i).getBoolean("attending");
                     // Second, accept button
                     Button accept = new Button(ViewEventActivity.this);
                     accept.setText("Accept");
@@ -69,9 +72,15 @@ public class ViewEventActivity extends ActionBarActivity {
                     // Third, deny button
                     Button deny = new Button(ViewEventActivity.this);
                     deny.setText("Deny");
-                    deny.setId(i);
+                    deny.setId(i+50);
                     row.addView(deny);
                     deny.setOnClickListener(denyHandler);
+
+                    if(attending){
+                        accept.setTextColor(Color.GREEN);
+                    } else {
+                        deny.setTextColor(Color.RED);
+                    }
 
                     table_layout.addView(row);
                 }
@@ -82,6 +91,12 @@ public class ViewEventActivity extends ActionBarActivity {
     View.OnClickListener acceptHandler = new OnClickListener() {
         @Override
         public void onClick(View view) {
+            // Set button color to green
+            Button clickHere = (Button) findViewById(organizers.size() - 1);
+            clickHere.setTextColor(Color.GREEN);
+            Button notClicked = (Button) findViewById(organizers.size() - 1 + 50);
+            notClicked.setTextColor(Color.BLACK);
+
             String organizer = organizers.get(organizers.size() - 1);
 
             // Query find the organizer of the event
@@ -103,8 +118,13 @@ public class ViewEventActivity extends ActionBarActivity {
     View.OnClickListener denyHandler = new OnClickListener() {
         @Override
         public void onClick(View view) {
+            // Set button color to red
+            Button clickHere = (Button) findViewById(organizers.size() - 1 + 50);
+            clickHere.setTextColor(Color.RED);
+            Button notClicked = (Button) findViewById(organizers.size() - 1);
+            notClicked.setTextColor(Color.BLACK);
+
             String organizer = organizers.get(organizers.size() - 1);
-            System.out.printf("deny: %s\n", organizer);
 
             // Query find the organizer of the event
             ParseQuery<ParseObject> eventQuery = ParseQuery.getQuery("events");
