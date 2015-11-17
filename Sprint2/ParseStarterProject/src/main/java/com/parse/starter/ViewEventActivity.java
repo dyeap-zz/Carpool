@@ -34,17 +34,18 @@ public class ViewEventActivity extends ActionBarActivity {
         TextView textElement = (TextView) findViewById(R.id.username);
         textElement.setText(username);
 
-        // Create Table for activivty.view_event.xml
+        // Create Table for activity.view_event.xml
         final TableLayout table_layout = (TableLayout) findViewById(R.id.tableLayout);
 
         // Query eventTable and find matches of the user under
         // organizer and guest columns
-        ParseQuery<ParseObject> events = ParseQuery.getQuery("events");
-        //events.whereEqualTo("organizer", username);
-        events.whereEqualTo("guest", username);
-        events.findInBackground(new FindCallback<ParseObject>() {
+        ParseQuery<ParseObject> queryEvents = ParseQuery.getQuery("EventsTable");
+        //queryEvents.whereEqualTo("organizer", "peas");
+        queryEvents.whereEqualTo("guest", username);
+        queryEvents.findInBackground(new FindCallback<ParseObject>() {
             @Override
             public void done(List<ParseObject> objects, com.parse.ParseException e) {
+                System.out.printf("how many queries: %d\n", objects.size());
                 for(int i = 0; i < objects.size(); i++){
                     // Creates the row in the table
                     TableRow row = new TableRow(ViewEventActivity.this);
@@ -63,7 +64,7 @@ public class ViewEventActivity extends ActionBarActivity {
                     tv.setTextColor(Color.WHITE);
                     row.addView(tv);
                     // attending?
-                    Boolean attending = objects.get(i).getBoolean("attending");
+                    Boolean attending = objects.get(i).getBoolean("attendance");
                     // Second, accept button
                     Button accept = new Button(ViewEventActivity.this);
                     accept.setText("Accept");
@@ -87,6 +88,8 @@ public class ViewEventActivity extends ActionBarActivity {
                 }
             }
         });
+
+
     }
 
     View.OnClickListener acceptHandler = new OnClickListener() {
@@ -101,7 +104,7 @@ public class ViewEventActivity extends ActionBarActivity {
             String organizer = organizers.get(organizers.size() - 1);
 
             // Query find the organizer of the event
-            ParseQuery<ParseObject> eventQuery = ParseQuery.getQuery("events");
+            ParseQuery<ParseObject> eventQuery = ParseQuery.getQuery("EventsTable");
             eventQuery.whereEqualTo("organizer", organizer);
             eventQuery.findInBackground(new FindCallback<ParseObject>() {
                 @Override
@@ -128,7 +131,7 @@ public class ViewEventActivity extends ActionBarActivity {
             String organizer = organizers.get(organizers.size() - 1);
 
             // Query find the organizer of the event
-            ParseQuery<ParseObject> eventQuery = ParseQuery.getQuery("events");
+            ParseQuery<ParseObject> eventQuery = ParseQuery.getQuery("EventsTable");
             eventQuery.whereEqualTo("organizer", organizer);
             eventQuery.findInBackground(new FindCallback<ParseObject>() {
                 @Override

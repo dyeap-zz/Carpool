@@ -2,9 +2,9 @@ package com.parse.starter;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
+import android.graphics.Color;
 import android.os.Bundle;
-import android.util.Log;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -18,7 +18,6 @@ import com.parse.FindCallback;
 import com.parse.ParseException;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
-import com.parse.ParseUser;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -68,7 +67,8 @@ public class EventActivity extends ActionBarActivity {
         final String username = DataHolder.getInstance().getUsername();
         EditText text_passenger = (EditText) findViewById(R.id.enter_passenger);
         String passenger_username = text_passenger.getText().toString();
-        ParseObject testObject = new ParseObject("events");
+        //ParseObject testObject = new ParseObject("events");
+        ParseObject testObject = DataHolder.getInstance().getEvent();
         testObject.put("organizer", username);
         testObject.put("guest", passenger_username);
         testObject.put("attending", false);
@@ -82,6 +82,7 @@ public class EventActivity extends ActionBarActivity {
         table_layout.removeAllViews();
         updateTable(null);
     }
+
     /* Called when user clicks "Update" button */
     public int flag;
     public void Update(View view) {
@@ -96,7 +97,7 @@ public class EventActivity extends ActionBarActivity {
         EditText text_time = (EditText) findViewById(R.id.enter_time);
         final int time = Integer.parseInt(text_time.getText().toString());
         final ArrayList<String> passengers = new ArrayList<String>();
-        ParseQuery<ParseObject> passengerQuery = ParseQuery.getQuery("events");
+        ParseQuery<ParseObject> passengerQuery = ParseQuery.getQuery("EventsTable");
         passengerQuery.whereEqualTo("organizer", username);
         passengerQuery.findInBackground(new FindCallback<ParseObject>() {
             public void done(List<ParseObject> object, ParseException e) {
@@ -161,17 +162,22 @@ public class EventActivity extends ActionBarActivity {
         startActivity(intent);
     }
     public void updateTable(View view){
+        System.out.printf("UPDATE\n");
         final String username = DataHolder.getInstance().getUsername();
         final TableLayout table_layout = (TableLayout) findViewById(R.id.tableLayout);
-        ParseQuery<ParseObject> passengerList = ParseQuery.getQuery("events");
-        passengerList.whereEqualTo("organizer", username);
-        passengerList.findInBackground(new FindCallback<ParseObject>() {
+        ParseQuery<ParseObject> queryGuests = ParseQuery.getQuery("EventsTable");
+        queryGuests.whereEqualTo("organizer", username);
+        System.out.printf("username: %s\n", username);
+        queryGuests.findInBackground(new FindCallback<ParseObject>() {
             @Override
             public void done(List<ParseObject> objects, ParseException e) {
                 if (e == null) {
+                    System.out.printf("Querying Success\n");
+                    System.out.printf("how many queries: %d\n", objects.size());
                     int i = 0;
                     int cols = 3;
                     while (i < objects.size()) {
+                        System.out.printf("number of elements %d\n", objects.size());
                         TableRow row = new TableRow(context);
                         row.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT,
                                 TableRow.LayoutParams.WRAP_CONTENT));
@@ -184,19 +190,22 @@ public class EventActivity extends ActionBarActivity {
                             if (j == 0) {
                                 /* Number each entry */
                                 tv.setText(Integer.toString(i + 1));
+                                tv.setTextColor(Color.WHITE);
                                 row.addView(tv);
                             } else if (j == 1) {
                                 /* Username of friend */
                                 String friend_username = objects.get(i).getString("guest");
                                 tv.setText(friend_username);
+                                tv.setTextColor(Color.WHITE);
                                 row.addView(tv);
                             } else if (j == 2) {
                                 /* Time owed */
-                                Boolean isAttend = objects.get(i).getBoolean("attending");
+                                Boolean isAttend = objects.get(i).getBoolean("attendance");
                                 if (isAttend == true)
                                     tv.setText("Attending");
                                 else
                                     tv.setText("Not Attending");
+                                tv.setTextColor(Color.WHITE);
                                 row.addView(tv);
                             }
                         }
@@ -207,8 +216,8 @@ public class EventActivity extends ActionBarActivity {
                             @Override
                             public void onClick(View v) {
                                 try {
-                                    ParseObject.createWithoutData("events", (String) removeButton.getContentDescription()).delete();
-                                }catch(Exception e){
+                                    ParseObject.createWithoutData("EventsTable", (String) removeButton.getContentDescription()).delete();
+                                } catch (Exception e) {
                                     System.err.println("cant find");
                                 }
                                 table_layout.removeAllViews();
@@ -222,6 +231,8 @@ public class EventActivity extends ActionBarActivity {
                         row.addView(removeButton);
                         table_layout.addView(row);
                     }
+                } else {
+                    System.out.printf("TOO BAD\n");
                 }
             }
         });

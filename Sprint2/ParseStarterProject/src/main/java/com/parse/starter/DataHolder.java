@@ -24,7 +24,7 @@ public class DataHolder {
     /* eventTable stores the organizer, invitee, and attendance
      * Columns: organizer, guest, attending
      */
-    ParseObject eventTable = new ParseObject("events");
+    ParseObject eventTable = new ParseObject("EventsTable");
     public ParseObject getEvent() { return eventTable; }
     public void setEvent(ParseObject eventTable) { this.eventTable = eventTable; }
 
