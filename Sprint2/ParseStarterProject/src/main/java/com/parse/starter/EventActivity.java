@@ -15,9 +15,11 @@ import android.widget.TableRow;
 import android.widget.TextView;
 
 import com.parse.FindCallback;
+import com.parse.ParseACL;
 import com.parse.ParseException;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
+import com.parse.ParseUser;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -66,18 +68,61 @@ public class EventActivity extends ActionBarActivity {
         final TableLayout table_layout = (TableLayout) findViewById(R.id.tableLayout);
         final String username = DataHolder.getInstance().getUsername();
         EditText text_passenger = (EditText) findViewById(R.id.enter_passenger);
-        String passenger_username = text_passenger.getText().toString();
-        ParseObject eventsTable = new ParseObject("EventsTable");
-        //ParseObject eventsTable = DataHolder.getInstance().getEvent();
-        eventsTable.put("organizer", username);
-        eventsTable.put("guest", passenger_username);
-        eventsTable.put("attendance", false);
-        try {
-            eventsTable.saveInBackground();
-        }
-        catch(Exception e){
-            System.err.print("error");
-        }
+        final String passenger_username = text_passenger.getText().toString();
+
+        final ParseObject eventsTable = new ParseObject("EventsTable");
+
+        // Query if passenger is a friend
+        ParseQuery<ParseObject> queryFriend1 = ParseQuery.getQuery("DrivingTable");
+        queryFriend1.whereEqualTo("user1", passenger_username);
+        ParseQuery<ParseObject> queryFriend2 = ParseQuery.getQuery("DrivingTable");
+        queryFriend2.whereEqualTo("user2", passenger_username);
+
+        List<ParseQuery<ParseObject>> queries = new ArrayList<ParseQuery<ParseObject>>();
+        queries.add(queryFriend1);
+        queries.add(queryFriend2);
+
+        ParseQuery<ParseObject> mainQuery = ParseQuery.or(queries);
+        mainQuery.findInBackground(new FindCallback<ParseObject>() {
+            @Override
+            public void done(List<ParseObject> objects, ParseException e) {
+                if (e == null) {
+
+                    eventsTable.put("organizer", username);
+                    eventsTable.put("guest", passenger_username);
+                    eventsTable.put("attendance", false);
+                    eventsTable.saveInBackground();
+                    ParseACL groupACL = new ParseACL();
+                    groupACL.setReadAccess(ParseUser.getCurrentUser(), true);
+                    groupACL.setWriteAccess(ParseUser.getCurrentUser(), true);
+                    groupACL.setReadAccess(objects.get(0).getObjectId(), true);
+                    groupACL.setWriteAccess(objects.get(0).getObjectId(), true);
+                    eventsTable.setACL(groupACL);
+                    eventsTable.saveInBackground();
+                }
+            }
+        });
+
+        // Set ACL
+        ParseQuery<ParseUser> query = ParseUser.getQuery();
+        query.whereEqualTo("username", passenger_username);
+        query.findInBackground(new FindCallback<ParseUser>() {
+            @Override
+            public void done(List<ParseUser> objects, ParseException e) {
+                if (e == null) {
+                    // Add ACL -- Both users can access
+                    ParseACL groupACL = new ParseACL();
+                    groupACL.setReadAccess(ParseUser.getCurrentUser(), true);
+                    groupACL.setWriteAccess(ParseUser.getCurrentUser(), true);
+                    groupACL.setReadAccess(objects.get(0).getObjectId(), true);
+                    groupACL.setWriteAccess(objects.get(0).getObjectId(), true);
+                    eventsTable.setACL(groupACL);
+                    eventsTable.saveInBackground();
+                } else {
+                    System.out.println("NOT FOUND");
+                }
+            }
+        });
 
         table_layout.removeAllViews();
         updateTable(null);

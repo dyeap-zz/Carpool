@@ -42,6 +42,7 @@ public class ViewEventActivity extends ActionBarActivity {
         ParseQuery<ParseObject> queryEvents = ParseQuery.getQuery("EventsTable");
         //queryEvents.whereEqualTo("organizer", "peas");
         queryEvents.whereEqualTo("guest", username);
+        //queryEvents.whereEqualTo("attendance", false);
         queryEvents.findInBackground(new FindCallback<ParseObject>() {
             @Override
             public void done(List<ParseObject> objects, com.parse.ParseException e) {
