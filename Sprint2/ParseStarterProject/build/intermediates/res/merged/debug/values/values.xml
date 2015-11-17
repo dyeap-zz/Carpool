@@ -212,7 +212,6 @@
     <string name="enter_time">Time Owed</string>
     <string name="enter_user">Username</string>
     <string name="find_friend">Find Friend</string>
-    <string name="find_status">Waiting for input...</string>
     <string name="hello_world">Hello World!</string>
     <string name="join">Let\'s get you started!</string>
     <string name="parse_app_id">YOUR_APPLICATION_ID</string>

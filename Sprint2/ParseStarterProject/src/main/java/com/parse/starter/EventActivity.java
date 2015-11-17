@@ -82,8 +82,6 @@ public class EventActivity extends ActionBarActivity {
         ParseQuery<ParseObject> queryFriend2 = ParseQuery.getQuery("DrivingTable");
         queryFriend2.whereEqualTo("user2", passenger_username);
 
-
-
         List<ParseQuery<ParseObject>> queries = new ArrayList<ParseQuery<ParseObject>>();
         queries.add(queryFriend1);
         queries.add(queryFriend2);

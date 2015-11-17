@@ -44,7 +44,6 @@
 
     <string name="enter_friend">Enter Friend</string>
     <string name="find_friend">Find Friend</string>
-    <string name="find_status">Waiting for input...</string>
 
     <string name="enter_passenger">Passenger</string>
     <string name="enter_time">Time Owed</string>

@@ -17,6 +17,7 @@ import com.parse.ParseObject;
 import com.parse.ParseQuery;
 import com.parse.ParseUser;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -55,8 +56,10 @@ public class FriendActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void AddFriend(View view){
-        final Intent intent = new Intent(this, AccountActivity.class);
+
+    boolean new_friend = false;
+    public void AddFriend(View view) {
+
 
         /* Retrieve user's username */
         final String user = DataHolder.getInstance().getUsername();
@@ -64,45 +67,101 @@ public class FriendActivity extends ActionBarActivity {
         EditText text_friend = (EditText) findViewById(R.id.enter_friend);
         final String friend = text_friend.getText().toString();
 
-        /* Query Friend */
-        ParseQuery<ParseUser> query = ParseUser.getQuery();
-        query.whereEqualTo("username", friend);
-        query.findInBackground(new FindCallback<ParseUser>() {
-            @Override
-            public void done(List<ParseUser> objects, ParseException e) {
-                if (objects.size() > 0 ) {
-                    // Create an object for the relationship in DrivingTable
-                    ParseObject buddy_object = DataHolder.getInstance().getData();
-                    buddy_object.put("user1", user);
-                    buddy_object.put("user2", friend);
-                    buddy_object.put("time", 0);
-                    
-                    // Add ACL -- Both users can access
-                    ParseACL groupACL = new ParseACL();
-                    groupACL.setReadAccess(ParseUser.getCurrentUser(), true);
-                    groupACL.setWriteAccess(ParseUser.getCurrentUser(), true);
-                    groupACL.setReadAccess(objects.get(0).getObjectId(), true);
-                    groupACL.setWriteAccess(objects.get(0).getObjectId(), true);
-                    buddy_object.setACL(groupACL);
-                    buddy_object.saveInBackground();
 
-                    // Message when successfully added as a friend
-                    CharSequence textSuccess = friend + " is added as a friend";
-                    int duration = Toast.LENGTH_SHORT;
-                    Toast toastSuccess = Toast.makeText(FriendActivity.this, textSuccess, duration);
-                    toastSuccess.show();
+        if (!user.equals(friend)) {
+            // Query if friend relationship already exists
+            ParseQuery<ParseObject> queryUser1 = ParseQuery.getQuery("DrivingTable");
+            queryUser1.whereEqualTo("user1", user);
+            queryUser1.whereEqualTo("user2", friend);
 
-                    // Return to Account page
-                    startActivity(intent);
-                } else {
-                    // Message when failed to add as friend
-                    CharSequence textFail = "Unable to find " + friend;
-                    int duration = Toast.LENGTH_SHORT;
-                    Toast toastFail = Toast.makeText(FriendActivity.this, textFail, duration);
-                    toastFail.show();
+            ParseQuery<ParseObject> queryUser2 = ParseQuery.getQuery("DrivingTable");
+            queryUser2.whereEqualTo("user1", friend);
+            queryUser2.whereEqualTo("user2", user);
+
+            List<ParseQuery<ParseObject>> queries =
+                    new ArrayList<ParseQuery<ParseObject>>();
+            queries.add(queryUser1);
+            queries.add(queryUser2);
+
+            ParseQuery<ParseObject> mainQuery = ParseQuery.or(queries);
+            mainQuery.findInBackground(new FindCallback<ParseObject>() {
+                @Override
+                public void done(List<ParseObject> objects, ParseException e) {
+                    if (objects.size() == 0) {
+                        // Query if the friend has an account
+                        ParseQuery<ParseUser> query = ParseUser.getQuery();
+                        query.whereEqualTo("username", friend);
+                        query.findInBackground(new FindCallback<ParseUser>() {
+                            @Override
+                            public void done(List<ParseUser> objects, ParseException e) {
+                                if (objects.size() > 0) {
+                                    ParseObject buddy = new ParseObject("DrivingTable");
+                                    buddy.put("user1", user);
+                                    buddy.put("user2", friend);
+                                    buddy.put("time", 0);
+                                    // Add ACL -- Both users can access
+                                    ParseACL groupACL = new ParseACL();
+                                    groupACL.setReadAccess(ParseUser.getCurrentUser(), true);
+                                    groupACL.setWriteAccess(ParseUser.getCurrentUser(), true);
+                                    groupACL.setReadAccess(objects.get(0).getObjectId(), true);
+                                    groupACL.setWriteAccess(objects.get(0).getObjectId(), true);
+                                    buddy.setACL(groupACL);
+                                    buddy.saveInBackground();
+
+                                    // Message when successfully added as a friend
+                                    CharSequence textSuccess = friend + " is added as a friend";
+                                    int duration = Toast.LENGTH_SHORT;
+                                    Toast toastSuccess = Toast.makeText(FriendActivity.this,
+                                            textSuccess, duration);
+                                    toastSuccess.show();
+
+                                    // Return to Account page
+                                    Intent intent = new Intent(FriendActivity.this,
+                                            AccountActivity.class);
+                                    startActivity(intent);
+                                } else {
+                                    // Message when failed to add as friend
+                                    CharSequence textFail = "Unable to find " + friend +
+                                            " in our database. Invite your friend " +
+                                            "to join Driving Tracker!";
+                                    int duration = Toast.LENGTH_SHORT;
+                                    Toast toastFail = Toast.makeText(FriendActivity.this, textFail,
+                                            duration);
+                                    toastFail.show();
+                                }
+                            }
+                        });
+
+                    } else {
+                        // Message when failed to add a friend
+                        CharSequence textFail = friend +
+                                " has already been added as a friend.";
+                        int duration = Toast.LENGTH_SHORT;
+                        Toast toastFail = Toast.makeText(FriendActivity.this,
+                                textFail, duration);
+                        toastFail.show();
+
+                        // Return to Account page
+                        Intent intent = new Intent(FriendActivity.this,
+                                LogActivity.class);
+                        startActivity(intent);
+                    }
                 }
-            }
-        });
+            });
+        } else {
+            // Message when failed to add friend
+            CharSequence textFail = "Cannot add yourself as friend";
+            int duration = Toast.LENGTH_SHORT;
+            Toast toastFail = Toast.makeText(FriendActivity.this,
+                    textFail, duration);
+            toastFail.show();
+
+            // Return to Account page
+            Intent intent = new Intent(FriendActivity.this,
+                    AccountActivity.class);
+            startActivity(intent);
+        }
+
 
     }
 }

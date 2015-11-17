@@ -11,16 +11,49 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b33b37e1-7343-45a5-b567-dc037fc51efe" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/classes/debug/com/parse/starter/AccountActivity.class" afterPath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/classes/debug/com/parse/starter/AccountActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/classes/debug/com/parse/starter/CreateAccountActivity.class" afterPath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/classes/debug/com/parse/starter/CreateAccountActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/classes/debug/com/parse/starter/EventActivity$1$1.class" afterPath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/classes/debug/com/parse/starter/EventActivity$1$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/classes/debug/com/parse/starter/EventActivity$1.class" afterPath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/classes/debug/com/parse/starter/EventActivity$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/classes/debug/com/parse/starter/EventActivity$2$1.class" afterPath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/classes/debug/com/parse/starter/EventActivity$2$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/classes/debug/com/parse/starter/EventActivity$2.class" afterPath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/classes/debug/com/parse/starter/EventActivity$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/classes/debug/com/parse/starter/EventActivity$3$1.class" afterPath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/classes/debug/com/parse/starter/EventActivity$3$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/classes/debug/com/parse/starter/EventActivity$3.class" afterPath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/classes/debug/com/parse/starter/EventActivity$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/classes/debug/com/parse/starter/EventActivity.class" afterPath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/classes/debug/com/parse/starter/EventActivity.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/classes/debug/com/parse/starter/FriendActivity$1.class" afterPath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/classes/debug/com/parse/starter/FriendActivity$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/classes/debug/com/parse/starter/FriendActivity.class" afterPath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/classes/debug/com/parse/starter/FriendActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/classes/debug/com/parse/starter/LogActivity.class" afterPath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/classes/debug/com/parse/starter/LogActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/classes/debug/com/parse/starter/MainActivity.class" afterPath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/classes/debug/com/parse/starter/MainActivity.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ParseStarterProject/build/outputs/apk/ParseStarterProject-debug-unaligned.apk" afterPath="$PROJECT_DIR$/ParseStarterProject/build/outputs/apk/ParseStarterProject-debug-unaligned.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ParseStarterProject/build/outputs/apk/ParseStarterProject-debug.apk" afterPath="$PROJECT_DIR$/ParseStarterProject/build/outputs/apk/ParseStarterProject-debug.apk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/classes/debug/android/support/v7/appcompat/R$id.class" afterPath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/classes/debug/android/support/v7/appcompat/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/classes/debug/com/parse/starter/R$id.class" afterPath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/classes/debug/com/parse/starter/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/classes/debug/com/parse/starter/R$integer.class" afterPath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/classes/debug/com/parse/starter/R$integer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/classes/debug/com/parse/starter/R$layout.class" afterPath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/classes/debug/com/parse/starter/R$layout.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/classes/debug/com/parse/starter/R$menu.class" afterPath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/classes/debug/com/parse/starter/R$menu.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/classes/debug/com/parse/starter/R$mipmap.class" afterPath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/classes/debug/com/parse/starter/R$mipmap.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/classes/debug/android/support/v7/appcompat/R$string.class" afterPath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/classes/debug/android/support/v7/appcompat/R$string.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/classes/debug/com/parse/starter/R$string.class" afterPath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/classes/debug/com/parse/starter/R$string.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/classes/debug/com/parse/starter/R$style.class" afterPath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/classes/debug/com/parse/starter/R$style.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/classes/debug/com/parse/starter/R$styleable.class" afterPath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/classes/debug/com/parse/starter/R$styleable.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/classes/debug/com/parse/starter/R.class" afterPath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/classes/debug/com/parse/starter/R.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/classes/debug/com/parse/starter/ViewEventActivity.class" afterPath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/classes/debug/com/parse/starter/ViewEventActivity.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/cache.properties.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/dex/debug/classes.dex" afterPath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/dex/debug/classes.dex" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileSnapshots.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/res/resources-debug.ap_" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/taskArtifacts.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ParseStarterProject/src/main/java/com/parse/starter/EventActivity.java" afterPath="$PROJECT_DIR$/ParseStarterProject/src/main/java/com/parse/starter/EventActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ParseStarterProject/src/main/java/com/parse/starter/FriendActivity.java" afterPath="$PROJECT_DIR$/ParseStarterProject/src/main/java/com/parse/starter/FriendActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ParseStarterProject/build/generated/source/r/debug/android/support/v7/appcompat/R.java" afterPath="$PROJECT_DIR$/ParseStarterProject/build/generated/source/r/debug/android/support/v7/appcompat/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ParseStarterProject/build/generated/source/r/debug/com/parse/starter/R.java" afterPath="$PROJECT_DIR$/ParseStarterProject/build/generated/source/r/debug/com/parse/starter/R.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/symbols/debug/R.txt" afterPath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/symbols/debug/R.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/res/merged/debug/layout/activity_friend.xml" afterPath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/res/merged/debug/layout/activity_friend.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ParseStarterProject/src/main/res/layout/activity_friend.xml" afterPath="$PROJECT_DIR$/ParseStarterProject/src/main/res/layout/activity_friend.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/incremental/mergeResourcesdebug/merger.xml" afterPath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/incremental/mergeResourcesdebug/merger.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ParseStarterProject/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/ParseStarterProject/src/main/res/values/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/res/merged/debug/values/values.xml" afterPath="$PROJECT_DIR$/ParseStarterProject/build/intermediates/res/merged/debug/values/values.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Sprint2.iws" />
@@ -46,23 +79,23 @@
         <entry file="file://$PROJECT_DIR$/ParseStarterProject/src/main/java/com/parse/starter/EventActivity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="126" column="20" selection-start-line="126" selection-start-column="20" selection-end-line="130" selection-end-column="37" />
+              <caret line="88" column="8" selection-start-line="88" selection-start-column="8" selection-end-line="88" selection-end-column="67" />
               <folding>
-                <element signature="e#2898#2923#0" expanded="true" />
-                <element signature="e#3101#5290#0" expanded="true" />
-                <element signature="e#3766#4770#0" expanded="true" />
-                <element signature="e#4769#4770#0" expanded="true" />
-                <element signature="e#5289#5290#0" expanded="true" />
-                <element signature="e#6012#6020#0" expanded="true" />
-                <element signature="e#6209#9304#0" expanded="true" />
-                <element signature="e#7589#7614#0" expanded="true" />
-                <element signature="e#7895#9137#0" expanded="true" />
-                <element signature="e#9136#9137#0" expanded="true" />
-                <element signature="e#9303#9304#0" expanded="true" />
-                <element signature="e#9782#13195#0" expanded="true" />
-                <element signature="e#12249#12878#0" expanded="true" />
-                <element signature="e#12877#12878#0" expanded="true" />
-                <element signature="e#13194#13195#0" expanded="true" />
+                <element signature="e#2896#2921#0" expanded="true" />
+                <element signature="e#3099#5288#0" expanded="true" />
+                <element signature="e#3764#4768#0" expanded="true" />
+                <element signature="e#4767#4768#0" expanded="true" />
+                <element signature="e#5287#5288#0" expanded="true" />
+                <element signature="e#6010#6018#0" expanded="true" />
+                <element signature="e#6207#9302#0" expanded="true" />
+                <element signature="e#7587#7612#0" expanded="true" />
+                <element signature="e#7893#9135#0" expanded="true" />
+                <element signature="e#9134#9135#0" expanded="true" />
+                <element signature="e#9301#9302#0" expanded="true" />
+                <element signature="e#9780#13193#0" expanded="true" />
+                <element signature="e#12247#12876#0" expanded="true" />
+                <element signature="e#12875#12876#0" expanded="true" />
+                <element signature="e#13192#13193#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -74,7 +107,8 @@
             <state vertical-scroll-proportion="0.0">
               <caret line="47" column="85" selection-start-line="47" selection-start-column="85" selection-end-line="47" selection-end-column="85" />
               <folding>
-                <element signature="imports" expanded="false" />
+                <element signature="e#1606#3743#0" expanded="true" />
+                <element signature="e#3742#3743#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -93,12 +127,38 @@
       <file leaf-file-name="FriendActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ParseStarterProject/src/main/java/com/parse/starter/FriendActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.97081715">
-              <caret line="78" column="20" selection-start-line="78" selection-start-column="20" selection-end-line="78" selection-end-column="20" />
+            <state vertical-scroll-proportion="0.79571986">
+              <caret line="161" column="34" selection-start-line="161" selection-start-column="34" selection-end-line="161" selection-end-column="34" />
               <folding>
-                <element signature="e#2248#4113#0" expanded="true" />
-                <element signature="e#4112#4113#0" expanded="true" />
+                <element signature="e#2641#2666#0" expanded="true" />
+                <element signature="e#2856#6640#0" expanded="true" />
+                <element signature="e#3292#5908#0" expanded="true" />
+                <element signature="e#5907#5908#0" expanded="true" />
+                <element signature="e#6639#6640#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activity_friend.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ParseStarterProject/src/main/res/layout/activity_friend.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-13.103448">
+              <caret line="40" column="51" selection-start-line="40" selection-start-column="51" selection-end-line="40" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="strings.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ParseStarterProject/src/main/res/values/strings.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-12.16">
+              <caret line="45" column="51" selection-start-line="45" selection-start-column="51" selection-end-line="45" selection-end-column="51" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -1585,19 +1645,19 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/ParseStarterProject/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/ParseStarterProject/src/main/java/com/parse/starter/AccountActivity.java" />
         <option value="$PROJECT_DIR$/ParseStarterProject/src/main/res/layout/activity_view_event.xml" />
         <option value="$PROJECT_DIR$/ParseStarterProject/src/main/res/layout/activity_account.xml" />
         <option value="$PROJECT_DIR$/ParseStarterProject/src/main/res/layout/activity_log.xml" />
         <option value="$PROJECT_DIR$/ParseStarterProject/src/main/res/layout/activity_main.xml" />
-        <option value="$PROJECT_DIR$/ParseStarterProject/src/main/res/layout/activity_friend.xml" />
         <option value="$PROJECT_DIR$/ParseStarterProject/src/main/res/layout/activity_event.xml" />
         <option value="$PROJECT_DIR$/ParseStarterProject/src/main/java/com/parse/starter/DataHolder.java" />
         <option value="$PROJECT_DIR$/ParseStarterProject/src/main/java/com/parse/starter/LogActivity.java" />
         <option value="$PROJECT_DIR$/ParseStarterProject/src/main/java/com/parse/starter/CreateAccountActivity.java" />
         <option value="$PROJECT_DIR$/ParseStarterProject/src/main/java/com/parse/starter/ViewEventActivity.java" />
         <option value="$PROJECT_DIR$/ParseStarterProject/src/main/java/com/parse/starter/EventActivity.java" />
+        <option value="$PROJECT_DIR$/ParseStarterProject/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/ParseStarterProject/src/main/res/layout/activity_friend.xml" />
         <option value="$PROJECT_DIR$/ParseStarterProject/src/main/java/com/parse/starter/FriendActivity.java" />
       </list>
     </option>
@@ -1665,6 +1725,46 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="ParseStarterProject" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="values" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Sprint2" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ParseStarterProject" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Sprint2" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ParseStarterProject" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="layout" />
+              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidResFolderTypeNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -1923,6 +2023,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3285151" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1941,7 +2042,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -1987,21 +2087,21 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#2898#2923#0" expanded="true" />
-            <element signature="e#3101#5290#0" expanded="true" />
-            <element signature="e#3766#4770#0" expanded="true" />
-            <element signature="e#4769#4770#0" expanded="true" />
-            <element signature="e#5289#5290#0" expanded="true" />
-            <element signature="e#6012#6020#0" expanded="true" />
-            <element signature="e#6209#9304#0" expanded="true" />
-            <element signature="e#7589#7614#0" expanded="true" />
-            <element signature="e#7895#9137#0" expanded="true" />
-            <element signature="e#9136#9137#0" expanded="true" />
-            <element signature="e#9303#9304#0" expanded="true" />
-            <element signature="e#9782#13195#0" expanded="true" />
-            <element signature="e#12249#12878#0" expanded="true" />
-            <element signature="e#12877#12878#0" expanded="true" />
-            <element signature="e#13194#13195#0" expanded="true" />
+            <element signature="e#2896#2921#0" expanded="true" />
+            <element signature="e#3099#5288#0" expanded="true" />
+            <element signature="e#3764#4768#0" expanded="true" />
+            <element signature="e#4767#4768#0" expanded="true" />
+            <element signature="e#5287#5288#0" expanded="true" />
+            <element signature="e#6010#6018#0" expanded="true" />
+            <element signature="e#6207#9302#0" expanded="true" />
+            <element signature="e#7587#7612#0" expanded="true" />
+            <element signature="e#7893#9135#0" expanded="true" />
+            <element signature="e#9134#9135#0" expanded="true" />
+            <element signature="e#9301#9302#0" expanded="true" />
+            <element signature="e#9780#13193#0" expanded="true" />
+            <element signature="e#12247#12876#0" expanded="true" />
+            <element signature="e#12875#12876#0" expanded="true" />
+            <element signature="e#13192#13193#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2011,7 +2111,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="47" column="85" selection-start-line="47" selection-start-column="85" selection-end-line="47" selection-end-column="85" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="e#1606#3743#0" expanded="true" />
+            <element signature="e#3742#3743#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2029,8 +2130,11 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="92" column="63" selection-start-line="92" selection-start-column="63" selection-end-line="92" selection-end-column="63" />
           <folding>
-            <element signature="e#2248#4113#0" expanded="true" />
-            <element signature="e#4112#4113#0" expanded="true" />
+            <element signature="e#2641#2666#0" expanded="true" />
+            <element signature="e#2856#6640#0" expanded="true" />
+            <element signature="e#3292#5908#0" expanded="true" />
+            <element signature="e#5907#5908#0" expanded="true" />
+            <element signature="e#6639#6640#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2040,21 +2144,21 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="61" column="49" selection-start-line="61" selection-start-column="49" selection-end-line="61" selection-end-column="49" />
           <folding>
-            <element signature="e#2898#2923#0" expanded="true" />
-            <element signature="e#3101#5290#0" expanded="true" />
-            <element signature="e#3766#4770#0" expanded="true" />
-            <element signature="e#4769#4770#0" expanded="true" />
-            <element signature="e#5289#5290#0" expanded="true" />
-            <element signature="e#6012#6020#0" expanded="true" />
-            <element signature="e#6209#9304#0" expanded="true" />
-            <element signature="e#7589#7614#0" expanded="true" />
-            <element signature="e#7895#9137#0" expanded="true" />
-            <element signature="e#9136#9137#0" expanded="true" />
-            <element signature="e#9303#9304#0" expanded="true" />
-            <element signature="e#9782#13195#0" expanded="true" />
-            <element signature="e#12249#12878#0" expanded="true" />
-            <element signature="e#12877#12878#0" expanded="true" />
-            <element signature="e#13194#13195#0" expanded="true" />
+            <element signature="e#2896#2921#0" expanded="true" />
+            <element signature="e#3099#5288#0" expanded="true" />
+            <element signature="e#3764#4768#0" expanded="true" />
+            <element signature="e#4767#4768#0" expanded="true" />
+            <element signature="e#5287#5288#0" expanded="true" />
+            <element signature="e#6010#6018#0" expanded="true" />
+            <element signature="e#6207#9302#0" expanded="true" />
+            <element signature="e#7587#7612#0" expanded="true" />
+            <element signature="e#7893#9135#0" expanded="true" />
+            <element signature="e#9134#9135#0" expanded="true" />
+            <element signature="e#9301#9302#0" expanded="true" />
+            <element signature="e#9780#13193#0" expanded="true" />
+            <element signature="e#12247#12876#0" expanded="true" />
+            <element signature="e#12875#12876#0" expanded="true" />
+            <element signature="e#13192#13193#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2064,7 +2168,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="41" column="43" selection-start-line="41" selection-start-column="43" selection-end-line="41" selection-end-column="43" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="e#1606#3743#0" expanded="true" />
+            <element signature="e#3742#3743#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2082,21 +2187,21 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="51" column="48" selection-start-line="51" selection-start-column="48" selection-end-line="51" selection-end-column="48" />
           <folding>
-            <element signature="e#2898#2923#0" expanded="true" />
-            <element signature="e#3101#5290#0" expanded="true" />
-            <element signature="e#3766#4770#0" expanded="true" />
-            <element signature="e#4769#4770#0" expanded="true" />
-            <element signature="e#5289#5290#0" expanded="true" />
-            <element signature="e#6012#6020#0" expanded="true" />
-            <element signature="e#6209#9304#0" expanded="true" />
-            <element signature="e#7589#7614#0" expanded="true" />
-            <element signature="e#7895#9137#0" expanded="true" />
-            <element signature="e#9136#9137#0" expanded="true" />
-            <element signature="e#9303#9304#0" expanded="true" />
-            <element signature="e#9782#13195#0" expanded="true" />
-            <element signature="e#12249#12878#0" expanded="true" />
-            <element signature="e#12877#12878#0" expanded="true" />
-            <element signature="e#13194#13195#0" expanded="true" />
+            <element signature="e#2896#2921#0" expanded="true" />
+            <element signature="e#3099#5288#0" expanded="true" />
+            <element signature="e#3764#4768#0" expanded="true" />
+            <element signature="e#4767#4768#0" expanded="true" />
+            <element signature="e#5287#5288#0" expanded="true" />
+            <element signature="e#6010#6018#0" expanded="true" />
+            <element signature="e#6207#9302#0" expanded="true" />
+            <element signature="e#7587#7612#0" expanded="true" />
+            <element signature="e#7893#9135#0" expanded="true" />
+            <element signature="e#9134#9135#0" expanded="true" />
+            <element signature="e#9301#9302#0" expanded="true" />
+            <element signature="e#9780#13193#0" expanded="true" />
+            <element signature="e#12247#12876#0" expanded="true" />
+            <element signature="e#12875#12876#0" expanded="true" />
+            <element signature="e#13192#13193#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2106,7 +2211,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="e#1606#3743#0" expanded="true" />
+            <element signature="e#3742#3743#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2116,21 +2222,21 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#2898#2923#0" expanded="true" />
-            <element signature="e#3101#5290#0" expanded="true" />
-            <element signature="e#3766#4770#0" expanded="true" />
-            <element signature="e#4769#4770#0" expanded="true" />
-            <element signature="e#5289#5290#0" expanded="true" />
-            <element signature="e#6012#6020#0" expanded="true" />
-            <element signature="e#6209#9304#0" expanded="true" />
-            <element signature="e#7589#7614#0" expanded="true" />
-            <element signature="e#7895#9137#0" expanded="true" />
-            <element signature="e#9136#9137#0" expanded="true" />
-            <element signature="e#9303#9304#0" expanded="true" />
-            <element signature="e#9782#13195#0" expanded="true" />
-            <element signature="e#12249#12878#0" expanded="true" />
-            <element signature="e#12877#12878#0" expanded="true" />
-            <element signature="e#13194#13195#0" expanded="true" />
+            <element signature="e#2896#2921#0" expanded="true" />
+            <element signature="e#3099#5288#0" expanded="true" />
+            <element signature="e#3764#4768#0" expanded="true" />
+            <element signature="e#4767#4768#0" expanded="true" />
+            <element signature="e#5287#5288#0" expanded="true" />
+            <element signature="e#6010#6018#0" expanded="true" />
+            <element signature="e#6207#9302#0" expanded="true" />
+            <element signature="e#7587#7612#0" expanded="true" />
+            <element signature="e#7893#9135#0" expanded="true" />
+            <element signature="e#9134#9135#0" expanded="true" />
+            <element signature="e#9301#9302#0" expanded="true" />
+            <element signature="e#9780#13193#0" expanded="true" />
+            <element signature="e#12247#12876#0" expanded="true" />
+            <element signature="e#12875#12876#0" expanded="true" />
+            <element signature="e#13192#13193#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2139,14 +2245,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ParseStarterProject/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.8">
-          <caret line="39" column="47" selection-start-line="39" selection-start-column="47" selection-end-line="39" selection-end-column="47" />
           <folding />
         </state>
       </provider>
@@ -2180,17 +2278,6 @@
             <element signature="e#403#436#0" expanded="false" />
             <element signature="e#789#807#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ParseStarterProject/src/main/res/layout/activity_friend.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.0">
-          <caret line="32" column="12" selection-start-line="32" selection-start-column="12" selection-end-line="33" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer">
@@ -2256,16 +2343,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ParseStarterProject/src/main/java/com/parse/starter/ViewEventActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="47" column="85" selection-start-line="47" selection-start-column="85" selection-end-line="47" selection-end-column="85" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ParseStarterProject/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.8754864">
@@ -2282,37 +2359,70 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ParseStarterProject/src/main/java/com/parse/starter/EventActivity.java">
+    <entry file="file://$PROJECT_DIR$/ParseStarterProject/src/main/java/com/parse/starter/ViewEventActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="126" column="20" selection-start-line="126" selection-start-column="20" selection-end-line="130" selection-end-column="37" />
+          <caret line="47" column="85" selection-start-line="47" selection-start-column="85" selection-end-line="47" selection-end-column="85" />
           <folding>
-            <element signature="e#2898#2923#0" expanded="true" />
-            <element signature="e#3101#5290#0" expanded="true" />
-            <element signature="e#3766#4770#0" expanded="true" />
-            <element signature="e#4769#4770#0" expanded="true" />
-            <element signature="e#5289#5290#0" expanded="true" />
-            <element signature="e#6012#6020#0" expanded="true" />
-            <element signature="e#6209#9304#0" expanded="true" />
-            <element signature="e#7589#7614#0" expanded="true" />
-            <element signature="e#7895#9137#0" expanded="true" />
-            <element signature="e#9136#9137#0" expanded="true" />
-            <element signature="e#9303#9304#0" expanded="true" />
-            <element signature="e#9782#13195#0" expanded="true" />
-            <element signature="e#12249#12878#0" expanded="true" />
-            <element signature="e#12877#12878#0" expanded="true" />
-            <element signature="e#13194#13195#0" expanded="true" />
+            <element signature="e#1606#3743#0" expanded="true" />
+            <element signature="e#3742#3743#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ParseStarterProject/src/main/java/com/parse/starter/EventActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="88" column="8" selection-start-line="88" selection-start-column="8" selection-end-line="88" selection-end-column="67" />
+          <folding>
+            <element signature="e#2896#2921#0" expanded="true" />
+            <element signature="e#3099#5288#0" expanded="true" />
+            <element signature="e#3764#4768#0" expanded="true" />
+            <element signature="e#4767#4768#0" expanded="true" />
+            <element signature="e#5287#5288#0" expanded="true" />
+            <element signature="e#6010#6018#0" expanded="true" />
+            <element signature="e#6207#9302#0" expanded="true" />
+            <element signature="e#7587#7612#0" expanded="true" />
+            <element signature="e#7893#9135#0" expanded="true" />
+            <element signature="e#9134#9135#0" expanded="true" />
+            <element signature="e#9301#9302#0" expanded="true" />
+            <element signature="e#9780#13193#0" expanded="true" />
+            <element signature="e#12247#12876#0" expanded="true" />
+            <element signature="e#12875#12876#0" expanded="true" />
+            <element signature="e#13192#13193#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ParseStarterProject/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.16">
+          <caret line="45" column="51" selection-start-line="45" selection-start-column="51" selection-end-line="45" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ParseStarterProject/src/main/res/layout/activity_friend.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.103448">
+          <caret line="40" column="51" selection-start-line="40" selection-start-column="51" selection-end-line="40" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ParseStarterProject/src/main/java/com/parse/starter/FriendActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.97081715">
-          <caret line="78" column="20" selection-start-line="78" selection-start-column="20" selection-end-line="78" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.79571986">
+          <caret line="161" column="34" selection-start-line="161" selection-start-column="34" selection-end-line="161" selection-end-column="34" />
           <folding>
-            <element signature="e#2248#4113#0" expanded="true" />
-            <element signature="e#4112#4113#0" expanded="true" />
+            <element signature="e#2641#2666#0" expanded="true" />
+            <element signature="e#2856#6640#0" expanded="true" />
+            <element signature="e#3292#5908#0" expanded="true" />
+            <element signature="e#5907#5908#0" expanded="true" />
+            <element signature="e#6639#6640#0" expanded="true" />
           </folding>
         </state>
       </provider>
