@@ -8,6 +8,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.parse.FindCallback;
 import com.parse.ParseACL;
@@ -69,12 +70,13 @@ public class FriendActivity extends ActionBarActivity {
         query.findInBackground(new FindCallback<ParseUser>() {
             @Override
             public void done(List<ParseUser> objects, ParseException e) {
-                if (e == null) {
+                if (objects.size() > 0 ) {
                     // Create an object for the relationship in DrivingTable
                     ParseObject buddy_object = DataHolder.getInstance().getData();
                     buddy_object.put("user1", user);
                     buddy_object.put("user2", friend);
                     buddy_object.put("time", 0);
+                    
                     // Add ACL -- Both users can access
                     ParseACL groupACL = new ParseACL();
                     groupACL.setReadAccess(ParseUser.getCurrentUser(), true);
@@ -83,16 +85,21 @@ public class FriendActivity extends ActionBarActivity {
                     groupACL.setWriteAccess(objects.get(0).getObjectId(), true);
                     buddy_object.setACL(groupACL);
                     buddy_object.saveInBackground();
-                    // Display message -- Friend Added
-                    TextView textElement = (TextView) findViewById(R.id.finding_status);
-                    textElement.setText("Friend Added -- " + friend);
+
+                    // Message when successfully added as a friend
+                    CharSequence textSuccess = friend + " is added as a friend";
+                    int duration = Toast.LENGTH_SHORT;
+                    Toast toastSuccess = Toast.makeText(FriendActivity.this, textSuccess, duration);
+                    toastSuccess.show();
+
                     // Return to Account page
                     startActivity(intent);
                 } else {
-                    System.out.println("NOT FOUND");
-                    // Display message -- Unable to find friend
-                    TextView textElement = (TextView) findViewById(R.id.finding_status);
-                    textElement.setText("Unable to find friend -- " + friend);
+                    // Message when failed to add as friend
+                    CharSequence textFail = "Unable to find " + friend;
+                    int duration = Toast.LENGTH_SHORT;
+                    Toast toastFail = Toast.makeText(FriendActivity.this, textFail, duration);
+                    toastFail.show();
                 }
             }
         });
