@@ -9,7 +9,6 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.parse.ParseObject;
 import com.parse.ParseUser;
 import com.parse.SignUpCallback;
 
@@ -21,7 +20,7 @@ public class CreateAccountActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_account);
 
-        ParseObject eventTable = DataHolder.getInstance().getEvent();
+        //ParseObject eventTable = DataHolder.getInstance().getEvent();
 
     }
 
@@ -56,12 +55,12 @@ public class CreateAccountActivity extends ActionBarActivity {
     /* Called when user clicks "Create Account" button
  * Creates a new account for user */
     public void CreateAccount(View view){
-        final Intent intent = new Intent(this, AccountActivity.class);
+        final Intent intent = new Intent(this, MainActivity.class);
 
         /* Retrieve username and password for creating a new account */
         EditText text_username = (EditText) findViewById(R.id.enter_newuser);
         EditText text_password = (EditText) findViewById(R.id.enter_newpassword);
-        String username = text_username.getText().toString();
+        final String username = text_username.getText().toString();
         String password = text_password.getText().toString();
 
         /* Create Account on Parse*/
@@ -85,7 +84,6 @@ public class CreateAccountActivity extends ActionBarActivity {
         final Toast toastsuccess = Toast.makeText(this, text, duration);
         final Toast toastfail = Toast.makeText(this, textfail, duration);
 
-
         user.signUpInBackground(new SignUpCallback() {
             @Override
             public void done(com.parse.ParseException e) {
@@ -98,5 +96,6 @@ public class CreateAccountActivity extends ActionBarActivity {
                 }
             }
         });
+
     }
 }

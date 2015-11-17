@@ -13,6 +13,7 @@ import android.widget.EditText;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.parse.FindCallback;
 import com.parse.ParseACL;
@@ -63,10 +64,14 @@ public class EventActivity extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    boolean friend_found = false;
     public void AddPassenger(View view){
         Intent intent = new Intent(this, AccountActivity.class);
         final TableLayout table_layout = (TableLayout) findViewById(R.id.tableLayout);
         final String username = DataHolder.getInstance().getUsername();
+
+        // Passenger's name
         EditText text_passenger = (EditText) findViewById(R.id.enter_passenger);
         final String passenger_username = text_passenger.getText().toString();
 
@@ -86,7 +91,7 @@ public class EventActivity extends ActionBarActivity {
         mainQuery.findInBackground(new FindCallback<ParseObject>() {
             @Override
             public void done(List<ParseObject> objects, ParseException e) {
-                if (e == null) {
+                if (objects.size() > 0) {
                     eventsTable.put("organizer", username);
                     eventsTable.put("guest", passenger_username);
                     eventsTable.put("attendance", false);
@@ -98,34 +103,45 @@ public class EventActivity extends ActionBarActivity {
                     groupACL.setWriteAccess(objects.get(0).getObjectId(), true);
                     eventsTable.setACL(groupACL);
                     eventsTable.saveInBackground();
+                    friend_found = true;
+                } else {
+                    CharSequence textFail = "Please add " + passenger_username +
+                            " before sending invite .";
+
+                    int duration = Toast.LENGTH_SHORT;
+                    Toast toastFail = Toast.makeText(EventActivity.this, textFail, duration);
+                    toastFail.show();
                 }
             }
         });
 
         // Set ACL
-        ParseQuery<ParseUser> query = ParseUser.getQuery();
-        query.whereEqualTo("username", passenger_username);
-        query.findInBackground(new FindCallback<ParseUser>() {
-            @Override
-            public void done(List<ParseUser> objects, ParseException e) {
-                if (e == null) {
-                    // Add ACL -- Both users can access
-                    ParseACL groupACL = new ParseACL();
-                    groupACL.setReadAccess(ParseUser.getCurrentUser(), true);
-                    groupACL.setWriteAccess(ParseUser.getCurrentUser(), true);
-                    groupACL.setReadAccess(objects.get(0).getObjectId(), true);
-                    groupACL.setWriteAccess(objects.get(0).getObjectId(), true);
-                    eventsTable.setACL(groupACL);
-                    eventsTable.saveInBackground();
-                } else {
-                    System.out.println("NOT FOUND");
+        if(friend_found) {
+            ParseQuery<ParseUser> query = ParseUser.getQuery();
+            query.whereEqualTo("username", passenger_username);
+            query.findInBackground(new FindCallback<ParseUser>() {
+                @Override
+                public void done(List<ParseUser> objects, ParseException e) {
+                    if (e == null) {
+                        // Add ACL -- Both users can access
+                        ParseACL groupACL = new ParseACL();
+                        groupACL.setReadAccess(ParseUser.getCurrentUser(), true);
+                        groupACL.setWriteAccess(ParseUser.getCurrentUser(), true);
+                        groupACL.setReadAccess(objects.get(0).getObjectId(), true);
+                        groupACL.setWriteAccess(objects.get(0).getObjectId(), true);
+                        eventsTable.setACL(groupACL);
+                        eventsTable.saveInBackground();
+                    } else {
+                        System.out.println("NOT FOUND");
+                    }
                 }
-            }
-        });
+            });
+            // Update table
+            table_layout.removeAllViews();
+            updateTable(null);
+        }
 
-        // Update table
-        table_layout.removeAllViews();
-        updateTable(null);
+
 
         // Clear EditText after name of passenger is entered
         text_passenger.getText().clear();
@@ -151,7 +167,7 @@ public class EventActivity extends ActionBarActivity {
             public void done(List<ParseObject> object, ParseException e) {
                 try{
                     for (int i = 0; i < object.size(); i++) {
-                        if (object.get(i).getBoolean("attending") == true){
+                        if (object.get(i).getBoolean("attendance") == true){
                             passengers.add(object.get(i).getString("guest"));
                             String test = object.get(i).getObjectId();
                         }
