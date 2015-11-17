@@ -112,7 +112,7 @@ public class ViewEventActivity extends ActionBarActivity {
                 public void done(List<ParseObject> objects, ParseException e) {
                     for(int i = 0; i < objects.size(); i++ ){
                         // Change attending to true
-                        objects.get(i).put("attending", true);
+                        objects.get(i).put("attendance", true);
                         objects.get(i).saveInBackground();
                     }
                 }
@@ -139,7 +139,7 @@ public class ViewEventActivity extends ActionBarActivity {
                 public void done(List<ParseObject> objects, ParseException e) {
                     for(int i = 0; i < objects.size(); i++){
                         // Update attending to false
-                        objects.get(i).put("attending", false);
+                        objects.get(i).put("attendance", false);
                         objects.get(i).saveInBackground();
                     }
                 }
