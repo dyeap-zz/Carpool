@@ -2,11 +2,11 @@
 <items version="2" >
 
     <item
-        jar="/Users/VivianTong/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/22.2.0/support-annotations-22.2.0.jar"
+        jar="/Users/VivianTong/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-android/1.2.1/44780c2cf98f6a3cf4e77f1234d644758b329201/bolts-android-1.2.1.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="66b42a1f3eb7676070b7ef7f14b603483aecbee1">
-        <dex dex="/Users/VivianTong/Documents/fall2015/cmps115/driving_tracker1/Sprint2/ParseStarterProject/build/intermediates/pre-dexed/debug/support-annotations-22.2.0-1e28b5fe6b3a39fc381a8ed612dd489a5151e8ef.jar" />
+        sha1="44780c2cf98f6a3cf4e77f1234d644758b329201">
+        <dex dex="/Users/VivianTong/Documents/fall2015/cmps115/driving_tracker1/Sprint2/ParseStarterProject/build/intermediates/pre-dexed/debug/bolts-android-1.2.1-3bd1d0a78178743e6c8c4253f4e8baf1e5889018.jar" />
     </item>
     <item
         jar="/Users/VivianTong/.gradle/caches/modules-2/files-2.1/com.parse/parse-android/1.10.3/36366e460af2c0f224bb8f70b64e3302f638b138/parse-android-1.10.3.jar"
@@ -16,11 +16,18 @@
         <dex dex="/Users/VivianTong/Documents/fall2015/cmps115/driving_tracker1/Sprint2/ParseStarterProject/build/intermediates/pre-dexed/debug/parse-android-1.10.3-520d3379f40f2c5c44b063184d4cfa39c2365f61.jar" />
     </item>
     <item
-        jar="/Users/VivianTong/Documents/fall2015/cmps115/driving_tracker1/Sprint2/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/classes.jar"
+        jar="/Users/VivianTong/Documents/fall2015/cmps115/driving_tracker1/Sprint2/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/libs/internal_impl-22.2.0.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
-        <dex dex="/Users/VivianTong/Documents/fall2015/cmps115/driving_tracker1/Sprint2/ParseStarterProject/build/intermediates/pre-dexed/debug/classes-0751f704dd3a296d6e90a8684b1becd0fc440337.jar" />
+        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
+        <dex dex="/Users/VivianTong/Documents/fall2015/cmps115/driving_tracker1/Sprint2/ParseStarterProject/build/intermediates/pre-dexed/debug/internal_impl-22.2.0-2676f1b18e28a2f5b8e59905d9ffb22380337e62.jar" />
+    </item>
+    <item
+        jar="/Users/VivianTong/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/22.2.0/support-annotations-22.2.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="66b42a1f3eb7676070b7ef7f14b603483aecbee1">
+        <dex dex="/Users/VivianTong/Documents/fall2015/cmps115/driving_tracker1/Sprint2/ParseStarterProject/build/intermediates/pre-dexed/debug/support-annotations-22.2.0-1e28b5fe6b3a39fc381a8ed612dd489a5151e8ef.jar" />
     </item>
     <item
         jar="/Users/VivianTong/Documents/fall2015/cmps115/driving_tracker1/Sprint2/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/jars/classes.jar"
@@ -30,18 +37,11 @@
         <dex dex="/Users/VivianTong/Documents/fall2015/cmps115/driving_tracker1/Sprint2/ParseStarterProject/build/intermediates/pre-dexed/debug/classes-182feb63c9139562072327b15a403d89490a14bc.jar" />
     </item>
     <item
-        jar="/Users/VivianTong/Documents/fall2015/cmps115/driving_tracker1/Sprint2/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/libs/internal_impl-22.2.0.jar"
+        jar="/Users/VivianTong/Documents/fall2015/cmps115/driving_tracker1/Sprint2/ParseStarterProject/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/classes.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
-        <dex dex="/Users/VivianTong/Documents/fall2015/cmps115/driving_tracker1/Sprint2/ParseStarterProject/build/intermediates/pre-dexed/debug/internal_impl-22.2.0-2676f1b18e28a2f5b8e59905d9ffb22380337e62.jar" />
-    </item>
-    <item
-        jar="/Users/VivianTong/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-android/1.2.1/44780c2cf98f6a3cf4e77f1234d644758b329201/bolts-android-1.2.1.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="44780c2cf98f6a3cf4e77f1234d644758b329201">
-        <dex dex="/Users/VivianTong/Documents/fall2015/cmps115/driving_tracker1/Sprint2/ParseStarterProject/build/intermediates/pre-dexed/debug/bolts-android-1.2.1-3bd1d0a78178743e6c8c4253f4e8baf1e5889018.jar" />
+        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
+        <dex dex="/Users/VivianTong/Documents/fall2015/cmps115/driving_tracker1/Sprint2/ParseStarterProject/build/intermediates/pre-dexed/debug/classes-0751f704dd3a296d6e90a8684b1becd0fc440337.jar" />
     </item>
 
 </items>
