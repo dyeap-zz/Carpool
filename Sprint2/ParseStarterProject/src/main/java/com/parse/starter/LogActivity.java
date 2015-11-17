@@ -1,6 +1,7 @@
 package com.parse.starter;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
@@ -70,6 +71,7 @@ public class LogActivity extends ActionBarActivity {
                             if (j == 0) {
                                 /* Number each entry */
                                 tv.setText(Integer.toString(i + 1));
+                                tv.setTextColor(Color.WHITE);
                                 row.addView(tv);
                             } else if (j == 1) {
                                 /* Username of friend */
@@ -78,11 +80,13 @@ public class LogActivity extends ActionBarActivity {
                                     friend_username = objects.get(i).getString("user1");
                                 }
                                 tv.setText(friend_username);
+                                tv.setTextColor(Color.WHITE);
                                 row.addView(tv);
                             } else if (j == 2) {
                                 /* Time owed */
                                 int time = objects.get(i).getInt("time");
                                 tv.setText(Integer.toString(time));
+                                tv.setTextColor(Color.WHITE);
                                 row.addView(tv);
                             }
                         }
