@@ -75,9 +75,9 @@ public class ViewEventActivity extends ActionBarActivity {
                     // Third, deny button
                     Button deny = new Button(ViewEventActivity.this);
                     deny.setText("Deny");
-                    deny.setId(i+50);
-                    row.addView(deny);
+                    deny.setId(i + 50);
                     deny.setOnClickListener(denyHandler);
+                    row.addView(deny);
 
                     if(attending){
                         accept.setTextColor(Color.GREEN);
@@ -97,12 +97,12 @@ public class ViewEventActivity extends ActionBarActivity {
         @Override
         public void onClick(View view) {
             // Set button color to green
-            Button clickHere = (Button) findViewById(organizers.size() - 1);
+            Button clickHere = (Button) findViewById(view.getId());
             clickHere.setTextColor(Color.GREEN);
-            Button notClicked = (Button) findViewById(organizers.size() - 1 + 50);
+            Button notClicked = (Button) findViewById(view.getId() + 50);
             notClicked.setTextColor(Color.BLACK);
 
-            String organizer = organizers.get(organizers.size() - 1);
+            String organizer = organizers.get(view.getId());
 
             // Query find the organizer of the event
             ParseQuery<ParseObject> eventQuery = ParseQuery.getQuery("EventsTable");
@@ -124,12 +124,12 @@ public class ViewEventActivity extends ActionBarActivity {
         @Override
         public void onClick(View view) {
             // Set button color to red
-            Button clickHere = (Button) findViewById(organizers.size() - 1 + 50);
+            Button clickHere = (Button) findViewById(view.getId());
             clickHere.setTextColor(Color.RED);
-            Button notClicked = (Button) findViewById(organizers.size() - 1);
+            Button notClicked = (Button) findViewById(view.getId() - 50);
             notClicked.setTextColor(Color.BLACK);
 
-            String organizer = organizers.get(organizers.size() - 1);
+            String organizer = organizers.get(view.getId() - 50);
 
             // Query find the organizer of the event
             ParseQuery<ParseObject> eventQuery = ParseQuery.getQuery("EventsTable");
@@ -144,8 +144,8 @@ public class ViewEventActivity extends ActionBarActivity {
                     }
                 }
             });
-
         }
+
     };
 
     @Override

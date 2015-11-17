@@ -87,7 +87,6 @@ public class EventActivity extends ActionBarActivity {
             @Override
             public void done(List<ParseObject> objects, ParseException e) {
                 if (e == null) {
-
                     eventsTable.put("organizer", username);
                     eventsTable.put("guest", passenger_username);
                     eventsTable.put("attendance", false);
@@ -124,8 +123,12 @@ public class EventActivity extends ActionBarActivity {
             }
         });
 
+        // Update table
         table_layout.removeAllViews();
         updateTable(null);
+
+        // Clear EditText after name of passenger is entered
+        text_passenger.getText().clear();
     }
 
     /* Called when user clicks "Update" button */
