@@ -67,13 +67,13 @@ public class EventActivity extends ActionBarActivity {
         final String username = DataHolder.getInstance().getUsername();
         EditText text_passenger = (EditText) findViewById(R.id.enter_passenger);
         String passenger_username = text_passenger.getText().toString();
-        //ParseObject testObject = new ParseObject("events");
-        ParseObject testObject = DataHolder.getInstance().getEvent();
-        testObject.put("organizer", username);
-        testObject.put("guest", passenger_username);
-        testObject.put("attending", false);
+        ParseObject eventsTable = new ParseObject("EventsTable");
+        //ParseObject eventsTable = DataHolder.getInstance().getEvent();
+        eventsTable.put("organizer", username);
+        eventsTable.put("guest", passenger_username);
+        eventsTable.put("attendance", false);
         try {
-            testObject.saveInBackground();
+            eventsTable.saveInBackground();
         }
         catch(Exception e){
             System.err.print("error");
@@ -162,22 +162,17 @@ public class EventActivity extends ActionBarActivity {
         startActivity(intent);
     }
     public void updateTable(View view){
-        System.out.printf("UPDATE\n");
         final String username = DataHolder.getInstance().getUsername();
         final TableLayout table_layout = (TableLayout) findViewById(R.id.tableLayout);
         ParseQuery<ParseObject> queryGuests = ParseQuery.getQuery("EventsTable");
         queryGuests.whereEqualTo("organizer", username);
-        System.out.printf("username: %s\n", username);
         queryGuests.findInBackground(new FindCallback<ParseObject>() {
             @Override
             public void done(List<ParseObject> objects, ParseException e) {
                 if (e == null) {
-                    System.out.printf("Querying Success\n");
-                    System.out.printf("how many queries: %d\n", objects.size());
                     int i = 0;
                     int cols = 3;
                     while (i < objects.size()) {
-                        System.out.printf("number of elements %d\n", objects.size());
                         TableRow row = new TableRow(context);
                         row.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT,
                                 TableRow.LayoutParams.WRAP_CONTENT));
@@ -232,7 +227,7 @@ public class EventActivity extends ActionBarActivity {
                         table_layout.addView(row);
                     }
                 } else {
-                    System.out.printf("TOO BAD\n");
+                    //System.out.printf("TOO BAD\n");
                 }
             }
         });

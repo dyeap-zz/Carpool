@@ -45,7 +45,7 @@ public class ViewEventActivity extends ActionBarActivity {
         queryEvents.findInBackground(new FindCallback<ParseObject>() {
             @Override
             public void done(List<ParseObject> objects, com.parse.ParseException e) {
-                System.out.printf("how many queries: %d\n", objects.size());
+
                 for(int i = 0; i < objects.size(); i++){
                     // Creates the row in the table
                     TableRow row = new TableRow(ViewEventActivity.this);
