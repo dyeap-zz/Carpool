@@ -90,4 +90,27 @@ public class MainActivity extends ActionBarActivity {
         Intent intent = new Intent(this, CreateAccountActivity.class);
         startActivity(intent);
     }
+
+    int count = 0;
+    //Click twice to exit the application.
+    @Override
+    public void onBackPressed(){
+         count++;
+         //displays if user wants to exit app
+        CharSequence text = "To exit click once more.";
+        int duration = Toast.LENGTH_SHORT;
+        final Toast toast = Toast.makeText(this, text, duration);
+        //first time click
+        if(count % 2 == 1){
+            toast.show();
+        }
+        //second time click
+        else if(count % 2 == 0) {
+                finish();
+                System.exit(0);
+        }
+        else{
+            throw new RuntimeException("System Error");
+        }
+    }
 }

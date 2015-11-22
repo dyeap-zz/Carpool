@@ -2252,8 +2252,8 @@ containing a value of this type.
         public static final int enterAlways=0x7f0c0015;
         public static final int enterAlwaysCollapsed=0x7f0c0016;
         public static final int enter_friend=0x7f0c007d;
-        public static final int enter_newpassword=0x7f0c0074;
-        public static final int enter_newuser=0x7f0c0075;
+        public static final int enter_newpassword=0x7f0c0075;
+        public static final int enter_newuser=0x7f0c0074;
         public static final int enter_passenger=0x7f0c0078;
         public static final int enter_password=0x7f0c0081;
         public static final int enter_time=0x7f0c007b;

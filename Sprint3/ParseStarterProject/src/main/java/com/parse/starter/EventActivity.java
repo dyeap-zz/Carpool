@@ -24,11 +24,13 @@ import com.parse.ParseUser;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.lang.*;
 
 
 public class EventActivity extends ActionBarActivity {
     public int increment;
     private Context context = this;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,8 +41,6 @@ public class EventActivity extends ActionBarActivity {
         TextView textElement = (TextView) findViewById(R.id.username);
         textElement.setText(username);
         updateTable(null);
-        
-
     }
 
     @Override
@@ -56,12 +56,10 @@ public class EventActivity extends ActionBarActivity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
         }
-
         return super.onOptionsItemSelected(item);
     }
 
@@ -73,6 +71,15 @@ public class EventActivity extends ActionBarActivity {
         // Passenger's name
         EditText text_passenger = (EditText) findViewById(R.id.enter_passenger);
         final String passenger_username = text_passenger.getText().toString();
+
+        //Throw error if passanger is yourself
+        if(passenger_username.equals(username)){
+            CharSequence text = "You may not add yourself silly.";
+            int duration = Toast.LENGTH_LONG;
+            final Toast toast = Toast.makeText(this, text, duration);
+            toast.show();
+            return;
+        }
 
         final ParseObject eventsTable = new ParseObject("EventsTable");
 
@@ -123,8 +130,8 @@ public class EventActivity extends ActionBarActivity {
 
                 } else {
                     CharSequence textFail = "Please add " + passenger_username +
-                            " before sending invite .";
-                    int duration = Toast.LENGTH_SHORT;
+                            "as a friend before sending invite.";
+                    int duration = Toast.LENGTH_LONG;
                     Toast toastFail = Toast.makeText(EventActivity.this, textFail, duration);
                     toastFail.show();
                 }
@@ -142,14 +149,24 @@ public class EventActivity extends ActionBarActivity {
     public void Update(View view) {
 
         Intent intent = new Intent(this, AccountActivity.class);
-
         final String username = DataHolder.getInstance().getUsername();
-
         EditText text_passenger = (EditText) findViewById(R.id.enter_passenger);
         String passenger_username = text_passenger.getText().toString();
-
         EditText text_time = (EditText) findViewById(R.id.enter_time);
-        final int time = Integer.parseInt(text_time.getText().toString());
+        String text = text_time.getText().toString();
+
+        //Error if the time is not an integer
+        for(int i =0; i<text.length(); i++){
+           if(!(text.charAt(i) >= '0' && text.charAt(i) <= '9')){
+               CharSequence error = "Time must be an integer.";
+               int duration = Toast.LENGTH_LONG;
+               final Toast toast = Toast.makeText(this, error, duration);
+               toast.show();
+               return;
+           }
+        }
+
+        final int time = Integer.parseInt(text);
         final ArrayList<String> passengers = new ArrayList<String>();
         ParseQuery<ParseObject> passengerQuery = ParseQuery.getQuery("EventsTable");
         passengerQuery.whereEqualTo("organizer", username);

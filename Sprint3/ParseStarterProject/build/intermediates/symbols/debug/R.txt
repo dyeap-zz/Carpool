@@ -606,8 +606,8 @@ int id enter 0x7f0c0082
 int id enterAlways 0x7f0c0015
 int id enterAlwaysCollapsed 0x7f0c0016
 int id enter_friend 0x7f0c007d
-int id enter_newpassword 0x7f0c0074
-int id enter_newuser 0x7f0c0075
+int id enter_newpassword 0x7f0c0075
+int id enter_newuser 0x7f0c0074
 int id enter_passenger 0x7f0c0078
 int id enter_password 0x7f0c0081
 int id enter_time 0x7f0c007b

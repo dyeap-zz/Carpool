@@ -12,16 +12,13 @@ import android.widget.Toast;
 import com.parse.ParseUser;
 import com.parse.SignUpCallback;
 
-
 public class CreateAccountActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_account);
-
         //ParseObject eventTable = DataHolder.getInstance().getEvent();
-
     }
 
     @Override
@@ -50,10 +47,15 @@ public class CreateAccountActivity extends ActionBarActivity {
     public void back(View v){
         final Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
+        CreateAccountActivity.this.finish();
     }
 
+    //Doesn't allow the user to go back, we use a signout button
+    @Override
+    public void onBackPressed(){}
+
     /* Called when user clicks "Create Account" button
- * Creates a new account for user */
+     * Creates a new account for user */
     public void CreateAccount(View view){
         final Intent intent = new Intent(this, MainActivity.class);
 
