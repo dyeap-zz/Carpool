@@ -8,6 +8,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.parse.FindCallback;
 import com.parse.ParseException;
@@ -55,8 +56,21 @@ public class ChangePasswordActivity extends ActionBarActivity {
 
         final String username = DataHolder.getInstance().getUsername();
         final EditText new_password = (EditText) findViewById(R.id.change_password);
+        final EditText confirm_password = (EditText) findViewById(R.id.confirm_password);
         String np = new_password.getText().toString();
-
+        String confirmPassword = confirm_password.getText().toString();
+        if((np.length()==0) || (confirmPassword.length() == 0)){
+            int duration = Toast.LENGTH_LONG;
+            final Toast toast = Toast.makeText(this, "both fields cannot be empty", duration);
+            toast.show();
+            return;
+        }
+        if(np.equals(confirmPassword)==false){
+            int duration = Toast.LENGTH_LONG;
+            final Toast toast = Toast.makeText(this, "passwords do not match", duration);
+            toast.show();
+            return;
+        }
         ParseUser currentUser = ParseUser.getCurrentUser();
         currentUser.setPassword(np);
         currentUser.saveInBackground();
