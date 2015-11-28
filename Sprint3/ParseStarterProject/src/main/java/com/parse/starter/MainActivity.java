@@ -60,7 +60,7 @@ public class MainActivity extends ActionBarActivity {
 
         //display error message if password is incorrect
         CharSequence text = "The username or password is incorrect!";
-        int duration = Toast.LENGTH_SHORT;
+        int duration = Toast.LENGTH_LONG;
         final Toast toast = Toast.makeText(this, text, duration);
 
         /* Retrieve username and password */
@@ -68,6 +68,28 @@ public class MainActivity extends ActionBarActivity {
         EditText text_password = (EditText) findViewById(R.id.enter_password);
         final String username = text_username.getText().toString();
         String password = text_password.getText().toString();
+
+        //Ensures there are no special characters in username, to protect from sql injection.
+        for(int i =0; i<username.length(); i++){
+            if(!((username.charAt(i) >= '0' && username.charAt(i) <= '9')
+                    || (username.charAt(i) >= 'a' && username.charAt(i) <= 'z')) ){
+                CharSequence error = "Please enter the correct username.";
+                final Toast message = Toast.makeText(this, error, duration);
+                message.show();
+                return;
+            }
+        }
+
+        //Ensures the same for password
+        for(int i =0; i<password.length(); i++){
+            if(!((password.charAt(i) >= '0' && password.charAt(i) <= '9')
+                    || (password.charAt(i) >= 'a' && password.charAt(i) <= 'z')) ){
+                CharSequence error = "Please enter the correct password.";
+                final Toast message = Toast.makeText(this, error, duration);
+                message.show();
+                return;
+            }
+        }
 
         /* Checks Parse User table for sign in */
         ParseUser.logInInBackground(username, password, new LogInCallback() {

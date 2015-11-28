@@ -2,39 +2,11 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\armando\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.0\support-annotations-23.1.0.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="92e3fc113ec3ee36b64603a38857b95700025633">
-        <dex dex="C:\Users\armando\Documents\GitHub\Carpool\Sprint3\ParseStarterProject\build\intermediates\pre-dexed\debug\support-annotations-23.1.0-6400815106e14d2a570a8bf7f68cf40d890d5b86.jar" />
-    </item>
-    <item
         jar="C:\Users\armando\Documents\GitHub\Carpool\Sprint3\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.1.0\jars\classes.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="3f151e49c316a5ab2c065969a3b3b55ef9b393fc">
         <dex dex="C:\Users\armando\Documents\GitHub\Carpool\Sprint3\ParseStarterProject\build\intermediates\pre-dexed\debug\classes-0b5c476f5f4f7a534d106f5feab849e65e77f2f5.jar" />
-    </item>
-    <item
-        jar="C:\Users\armando\Documents\GitHub\Carpool\Sprint3\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.0\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="57ae0d750ff83f0c738d21720224ac7ea866a094">
-        <dex dex="C:\Users\armando\Documents\GitHub\Carpool\Sprint3\ParseStarterProject\build\intermediates\pre-dexed\debug\classes-35643fc79556deaeadfee44a55120e6ac141177f.jar" />
-    </item>
-    <item
-        jar="C:\Users\armando\Documents\GitHub\Carpool\Sprint3\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\jars\libs\internal_impl-23.1.0.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="8716243bf04bae8d6c9ca94d27b9a9be7236f0a3">
-        <dex dex="C:\Users\armando\Documents\GitHub\Carpool\Sprint3\ParseStarterProject\build\intermediates\pre-dexed\debug\internal_impl-23.1.0-e4f887b733256f79eb1e96f26c8c8150b2a48c51.jar" />
-    </item>
-    <item
-        jar="C:\Users\armando\Documents\GitHub\Carpool\Sprint3\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\jars\classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="ddde541c289c8b816a8f8fd6c325d80788c522a6">
-        <dex dex="C:\Users\armando\Documents\GitHub\Carpool\Sprint3\ParseStarterProject\build\intermediates\pre-dexed\debug\classes-973e7c8eacc0759db00ed74f46ff52080b4754b3.jar" />
     </item>
     <item
         jar="C:\Users\armando\.gradle\caches\modules-2\files-2.1\com.parse\parse-android\1.10.3\36366e460af2c0f224bb8f70b64e3302f638b138\parse-android-1.10.3.jar"
@@ -44,11 +16,11 @@
         <dex dex="C:\Users\armando\Documents\GitHub\Carpool\Sprint3\ParseStarterProject\build\intermediates\pre-dexed\debug\parse-android-1.10.3-08c1589d5d193e95e0dec4c3fe865c7051cc3f7d.jar" />
     </item>
     <item
-        jar="C:\Users\armando\Documents\GitHub\Carpool\Sprint3\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\design\23.1.0\jars\classes.jar"
+        jar="C:\Users\armando\Documents\GitHub\Carpool\Sprint3\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\jars\libs\internal_impl-23.1.0.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="19026d31f5d3ae868db81319671a642be5fbba08">
-        <dex dex="C:\Users\armando\Documents\GitHub\Carpool\Sprint3\ParseStarterProject\build\intermediates\pre-dexed\debug\classes-b9c5cb7a22e1dbce21d3baa4bb2d67457f4d1d31.jar" />
+        sha1="8716243bf04bae8d6c9ca94d27b9a9be7236f0a3">
+        <dex dex="C:\Users\armando\Documents\GitHub\Carpool\Sprint3\ParseStarterProject\build\intermediates\pre-dexed\debug\internal_impl-23.1.0-e4f887b733256f79eb1e96f26c8c8150b2a48c51.jar" />
     </item>
     <item
         jar="C:\Users\armando\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-android\1.2.1\44780c2cf98f6a3cf4e77f1234d644758b329201\bolts-android-1.2.1.jar"
@@ -56,6 +28,34 @@
         revision="22.0.1"
         sha1="44780c2cf98f6a3cf4e77f1234d644758b329201">
         <dex dex="C:\Users\armando\Documents\GitHub\Carpool\Sprint3\ParseStarterProject\build\intermediates\pre-dexed\debug\bolts-android-1.2.1-9e78ed994e62f7f4f5062388fe91d35840589bb5.jar" />
+    </item>
+    <item
+        jar="C:\Users\armando\Documents\GitHub\Carpool\Sprint3\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="57ae0d750ff83f0c738d21720224ac7ea866a094">
+        <dex dex="C:\Users\armando\Documents\GitHub\Carpool\Sprint3\ParseStarterProject\build\intermediates\pre-dexed\debug\classes-35643fc79556deaeadfee44a55120e6ac141177f.jar" />
+    </item>
+    <item
+        jar="C:\Users\armando\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.0\support-annotations-23.1.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="92e3fc113ec3ee36b64603a38857b95700025633">
+        <dex dex="C:\Users\armando\Documents\GitHub\Carpool\Sprint3\ParseStarterProject\build\intermediates\pre-dexed\debug\support-annotations-23.1.0-6400815106e14d2a570a8bf7f68cf40d890d5b86.jar" />
+    </item>
+    <item
+        jar="C:\Users\armando\Documents\GitHub\Carpool\Sprint3\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\design\23.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="19026d31f5d3ae868db81319671a642be5fbba08">
+        <dex dex="C:\Users\armando\Documents\GitHub\Carpool\Sprint3\ParseStarterProject\build\intermediates\pre-dexed\debug\classes-b9c5cb7a22e1dbce21d3baa4bb2d67457f4d1d31.jar" />
+    </item>
+    <item
+        jar="C:\Users\armando\Documents\GitHub\Carpool\Sprint3\ParseStarterProject\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="ddde541c289c8b816a8f8fd6c325d80788c522a6">
+        <dex dex="C:\Users\armando\Documents\GitHub\Carpool\Sprint3\ParseStarterProject\build\intermediates\pre-dexed\debug\classes-973e7c8eacc0759db00ed74f46ff52080b4754b3.jar" />
     </item>
 
 </items>

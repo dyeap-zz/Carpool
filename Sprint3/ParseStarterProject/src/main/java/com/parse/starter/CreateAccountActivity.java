@@ -58,12 +58,35 @@ public class CreateAccountActivity extends ActionBarActivity {
      * Creates a new account for user */
     public void CreateAccount(View view){
         final Intent intent = new Intent(this, MainActivity.class);
+        int duration = Toast.LENGTH_LONG;
 
         /* Retrieve username and password for creating a new account */
         EditText text_username = (EditText) findViewById(R.id.enter_newuser);
         EditText text_password = (EditText) findViewById(R.id.enter_newpassword);
         final String username = text_username.getText().toString();
         String password = text_password.getText().toString();
+
+        //Ensures there are no special characters in username, to protect from sql injection.
+        for(int i =0; i<username.length(); i++){
+            if(!((username.charAt(i) >= '0' && username.charAt(i) <= '9')
+                    || (username.charAt(i) >= 'a' && username.charAt(i) <= 'z')) ){
+                CharSequence error = "No special characters please.";
+                final Toast message = Toast.makeText(this, error, duration);
+                message.show();
+                return;
+            }
+        }
+
+        //Ensures the same for password
+        for(int i =0; i<password.length(); i++){
+            if(!((password.charAt(i) >= '0' && password.charAt(i) <= '9')
+                    || (password.charAt(i) >= 'a' && password.charAt(i) <= 'z')) ){
+                CharSequence error = "No special characters please.";
+                final Toast message = Toast.makeText(this, error, duration);
+                message.show();
+                return;
+            }
+        }
 
         /* Create Account on Parse*/
         ParseUser user = new ParseUser();
@@ -82,7 +105,7 @@ public class CreateAccountActivity extends ActionBarActivity {
         else {
             textfail = "Username " + username + " " + "already taken!";
         }
-        int duration = Toast.LENGTH_SHORT;
+
         final Toast toastsuccess = Toast.makeText(this, text, duration);
         final Toast toastfail = Toast.makeText(this, textfail, duration);
 

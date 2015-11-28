@@ -19,7 +19,7 @@ public class AccountActivity extends ActionBarActivity {
         /* Displays username */
         String username = DataHolder.getInstance().getUsername();
         TextView textElement = (TextView) findViewById(R.id.username);
-        textElement.setText(username);
+        textElement.setText("Hello, " + username);
     }
 
 
