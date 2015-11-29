@@ -1,1 +1,44 @@
-S
+Document Name: Sprint 3 Report
+Product Name: Driving Tracker
+Team Name: Drifting Coders
+Sprint Completion Date: November 25, 2015
+
+Actions to stop doing:
+
+1.	This Sprint went well, but we should work on it eariler. There has been a lot of last minute fixes.
+
+
+Actions to start doing:
+
+1.	We should start using the chat to update each other once we have completed a task.
+2.	We should start constantly updating our local repo. 
+
+
+Actions to keep doing:
+1.	We should continue to meet up and do scrum meetings, because it keeps everyone up to date with progress.
+2.  We should continue updating the github repo frequently.
+
+
+
+Work completed/not completed:
+
+All user stories were completed
+
+User stories:
+User story 1: As a user, I would like to have ability to change my password, so that if I lose credentials I can change them.
+
+User story 2: As a user, I would like to have a nice and easy app to use layout to all android pages.
+
+User story 3: As a user, I would like to view a list of events I've been invited to and accept/decline them, so that I can chose which event to attend. 
+
+User story 4: As a user, I would like to update my create event page to show who is attending, and also add delete guests functionality. 
+
+Sprint 3:
+
+Work completion rate:
+
+Sprint 1: There were 3 user stories completed. 
+User Story 1: 60 hours
+User Story 2: 25 hours
+The average user story per day was 1.26 user story per day.
+The average work hours per day was 3.7 hours per day
