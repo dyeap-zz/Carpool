@@ -1,0 +1,47 @@
+Document name: System and Unit Test Report"
+Product Name: Driving Tracker
+Team Name: Drifting Coders
+Date: November 29th, 2015
+
+Written by: Vivian Tong
+Modules under test: View Events and View Log
+
+A. As a user, I would like a table that lists how much my friends and I
+have driven, so that I can easily see the distribution of driving.
+
+Scenario:
+1. Start Driving Tracker on device
+2. Log in
+    - Username = "tofu"
+		- Password = "tofu"
+		- Press "Sign In"
+3. Select "View Log"
+4. The user should see a list of his friends. 
+    The first column enumerates his friends. The second column contains 
+		names of the current user's friends. The third column contains the
+		amount of time driven each pair of friends owe to each other.
+
+B. As a user, I would like to view a list of events I've been invited to 
+and accept/decline them, so that I can chose which event to attend.
+
+Scenario: 
+
+1. Start Driving Tracker on device
+2. Log in
+    - Username = "tofu"
+		- Password = "tofu"
+		- Press "Sign In"
+3. Select "View Events"
+4. User should see his username at the top center of page and a list of 
+   invitations he has received and options to accept or decline the
+	 invitation.
+      Two users have invited the current user to events.
+	    The current user should see "toad" and "hello", who are the other two
+		  users that have invited the current user to events. Next to each 
+		  event organizer, there should be "accept" and "decline" buttons. 
+4. Accepting/Declining invitation
+		The default selection is decline.
+		If the user selects accept, "accept" should be green.
+		If the user selects decline, "decline" should be red.
+		Otherwise, the button should be black. 
+
