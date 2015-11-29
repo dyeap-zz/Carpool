@@ -130,7 +130,7 @@ public class EventActivity extends ActionBarActivity {
 
                 } else {
                     CharSequence textFail = "Please add " + passenger_username +
-                            "as a friend before sending invite.";
+                            " as a friend before sending invite.";
                     int duration = Toast.LENGTH_LONG;
                     Toast toastFail = Toast.makeText(EventActivity.this, textFail, duration);
                     toastFail.show();
