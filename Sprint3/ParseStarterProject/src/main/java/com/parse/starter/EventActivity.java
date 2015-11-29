@@ -213,6 +213,12 @@ public class EventActivity extends ActionBarActivity {
                                         object.get(0).put("time", prev_time - time);
                                         object.get(0).saveInBackground();
                                     }
+                                    try {
+                                        ParseObject.createWithoutData("EventsTable", object.get(0).getObjectId()).delete();
+                                    }
+                                    catch(Exception i){
+                                        System.err.print("error with deletion");
+                                    }
                                 } else {
                                     System.out.printf("user not found");
                                 }
