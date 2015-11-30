@@ -1,0 +1,42 @@
+Document name: System and Unit Test Report"
+Product Name: Driving Tracker
+Team Name: Drifting Coders
+Date: November 29th, 2015
+
+Written by: Danny Yeap
+Modules under test: Change Password and Add Friends
+
+A. As a user, I would like to have the ability to change my password, so that if I lose my credentials I can change them.
+
+Scenario:
+1. Start Driving Tracker on device
+2. Log in
+    - Username = "peach"
+		- Password = "peach"
+		- Press "Sign In"
+3. Select "Change Password"
+4. Click on the "Change Password" textbox and input a new password, "lol".
+5. Click on the "Update Password", this will bring you back to the home page
+6. Log in	
+	- Username = "peach"
+		-Password = "lol"
+		-Press "Sign in"
+ 
+
+B. As a user, I would like an add friends functionaly, so I can add people to an event
+
+Scenario: 
+
+1. Start Driving Tracker on device
+2. Log in
+    - Username = "peach"
+		- Password = "peach"
+		- Press "Sign In"
+3. Select "Add Friends"
+4. User should see a search bar allows you to add friends. Type "toad" into search bar
+5. Go back to main screen and click "View Log" to see if toad's name shows up
+6. Go back to login page 
+	- Username = "toad"
+		- Password = "toad"
+		- Press "Sign in"
+7. Click "View Log" and see if peach's name shows up
