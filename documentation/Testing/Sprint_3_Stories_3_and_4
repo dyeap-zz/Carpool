@@ -1,0 +1,20 @@
+A. User story 3 from sprint 3 (refresh)
+
+1. log in go to create event
+2. add friend, shows Not Attending by their name, then go back to main page
+3. friend accepts the invitation in view Event page
+4. go back to create event and Attending will be shown next to friend's name
+
+B. User story 3 from sprint 3 (delete friend)
+
+1. log in go to create event
+2. if no friends are listed under add passenger, add a passenger
+3. tap uninvite button next to user's name, passenger will be removed from list
+
+C. User story 4 from sprint 4 
+
+1. log into account 
+2. tap change password button on the top
+3. enter in new password
+4. re enter in new password
+5. tap enter password, then log in with new credentials
