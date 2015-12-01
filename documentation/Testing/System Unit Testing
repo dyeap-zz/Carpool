@@ -1,0 +1,47 @@
+Document name: System and Unit Test Report"
+Product Name: Driving Tracker
+Team Name: Drifting Coders
+Date: November 29th, 2015
+
+Written by: Armando Silva
+Modules under test: Check Correctness on Sign In and Create an Account Pages
+
+A. As a programmer, I would like to have the ability to catch errors on the Sign In page when users mistypes their username or password
+   so that they don't affect others informatinos.
+
+Scenario:
+1. Start Driving Tracker on device
+2. Log in
+    - Username = "peach"  *correct username
+		- Password = "blah"   *incorrect password
+		- Press "Sign In"
+	
+	  Or:
+	  
+	  -Username = "blah"  *incorrect username
+	  -Password = "peach" *correct password
+	  
+	  Or:
+	  -Username = "); DROP TABLE Users;--" *incorrect username
+	  
+	  Or:
+	  -Password = "); DROP TABLE Users;--" *incorrect password
+	  
+3. Select "Sign In"
+4. Toast shows up informing the user has mistype their password or username.
+
+B. As a user, I would like an add friends functionaly, so I can add people to an event
+
+Scenario: 
+1. Start Driving Tracker on device
+2. Click on Create Account
+    - Username = "peach"  *taken username
+		- Password = "peach"
+3. Select "Create Account"
+4. Toast shows up informing the user that the username has been taken.
+5. Another case would be no special characters for this reason
+6. At Create account 
+	- Username = "); DROP TABLE Users;--" *sql injection
+	- Password = "); DROP TABLE Users;--"
+	- Press "Create An Account"
+7. Toast shows up informing the user that the we don't allow special characters
